@@ -1,11 +1,11 @@
 ---
 
 layout: col-sidebar
-title: OWASP AI Testing Guide
+title: OWASP AI テストガイド
 tags: AITG
 level: 4
 type: documentation
-pitch: Methodology to perform an AI System Assessment 
+pitch: AI システム評価を実行するための方法論
 
 ---
 <div align="center">
@@ -14,26 +14,25 @@ pitch: Methodology to perform an AI System Assessment
 
 ### [OWASP AI テストガイド目次](Document/README.md)
 
-As organizations increasingly adopt artificial intelligence (AI) solutions, the need for a robust framework to rigorously test AI systems for security, ethics, reliability, and compliance becomes essential. Although numerous application security testing guides exist, such as the OWASP Web Security Testing Guide (WSTG) and Mobile Security Testing Guide (MSTG), the unique risks and challenges of AI systems require specialized guidance.
+組織は人工知能 (AI) ソリューションをますます採用しており、AI システムのセキュリティ、倫理、信頼性、コンプライアンスを厳密にテストするための堅牢なフレームワークの必要性が不可欠となっています。OWASP Web Security Testing Guide (WSTG) や Mobile Security Testing Guide (MSTG) など、数多くのアプリケーションセキュリティテストガイドが存在しますが、AI システム特有のリスクと課題には専門的なガイダンスが必要です。
 
-The OWASP AI Testing Guide aims to become the reference for identifying security, privacy, ethical, and compliance vulnerabilities inherent in AI applications. Inspired by established OWASP methodologies, the AI Testing Guide will deliver structured and practical guidance for security professionals, testers, and AI developers. This guide will be technology and industry agnostic, emphasizing applicability across various AI implementation scenarios.
+OWASP AI テストガイドは、AI アプリケーションに内在するセキュリティ、プライバシー、倫理、コンプライアンスに関する脆弱性を特定するためのリファレンスとなることを目指しています。確立した OWASP 方法論に着想を得て、AI テストガイドは、セキュリティ専門家、テスト担当者、AI 開発者に構造化されて実践的なガイダンスを提供します。このガイドはテクノロジや業界に依存せず、さまざまな AI 実装シナリオにわたる適用性を重視しています。
 
 ## AI テストの重要性
-AI testing is vital because AI now underpins critical decision-making and daily operations across industries, from healthcare and finance to automotive and cybersecurity. To ensure an AI system is truly reliable, secure, accurate, and ethical, testing must go well beyond basic functionality. It needs to validate bias and fairness controls to prevent discrimination, conduct adversarial robustness checks against crafted inputs designed to fool or hijack models, and perform security and privacy assessments, such as model-extraction, data-leakage, and poisoning attack simulations. Incorporating techniques like differential privacy ensures compliance with data-protection laws while safeguarding individual records. 
-This guide’s comprehensive approach to AI testing aims to uncover hidden risks and maintain trust in AI-driven solutions.
+AI テストは重要です。なぜなら AI は今や、医療や金融から自動車やサイバーセキュリティまで、あらゆる業界の重要な意思決定と日常業務の基盤となっています。AI システムが真に信頼性が高く、安全で、正確で、倫理的であることを確保するには、基本的な機能性をはるかに超えるテストが必要です。差別を防ぐためのバイアスと公平性のコントロールを検証し、モデルを欺いたり乗っ取るために細工された入力に対して敵対的堅牢性チェックを実施し、モデル抽出、データ漏洩、ポイズニング攻撃のシミュレーションといったセキュリティとプライバシーの評価を行う必要があります。差分プライバシーなどの技法を組み込むことで、データ保護法への準拠を確保しながら、個人の記録を保護します。
+このガイドの AI テストに対する包括的なアプローチは、隠れたリスクを明らかにし、AI 主導のソリューションに対する信頼を維持することを目的としています。
 
-## Why AI Testing is Unique
-Testing AI systems presents unique challenges compared to traditional software testing. AI models, especially those based on machine learning (ML), exhibit non-deterministic behavior; since many AI algorithms involve randomness, during training or inference making outputs probabilistic rather than repeatable. This demands specialized regression and stability tests that account for acceptable variance. AI models learn from and depend on the quality and distribution of their training data. Unlike traditional code, changing inputs (data drift) can silently degrade performance, so tests must validate both data quality and model output over time. 
+## AI テストがユニークな理由
+AI システムのテストは、従来のソフトウェアテストと比較して、特有の課題を伴います。AI モデル、特に機械学習 (ML) に基づくモデルは、非決定論的な動作を示します。多くの AI アルゴリズムはランダム性を伴うため、トレーニング時または推論時の出力は再現性がなく確率的になります。これは、許容可能な変動を考慮した、専用の回帰テストと安定性テストが必要です。AI モデルはトレーニングデータの品質と分布から学習して依存します。従来のコードとは異なり、入力の変化 (データドリフト) はパフォーマンスを徐々に低下する可能性があり、テストはデータ品質とモデル出力の両方を時間の経過とともに検証する必要があります。
 
-Because AI systems depend so heavily on the quality and integrity of their training and input data, data-centric testing methodologies become indispensable to ensure reliable, fair, and accurate model performance. Unintended biases hidden in training data can lead to discriminatory outcomes. AI testing must include fairness assessments and mitigation strategies, which are not part of conventional software QA.  The complexity and "black-box" nature of certain AI systems, such as deep learning neural networks, can obscure internal decision-making processes, complicating verification and validation. Adversarial or offensive security testing isn’t just recommended, it’s indispensable for AI technologies. 
+AI システムはトレーニングデータと入力データの品質と完全性に大きく依存するため、信頼性、公平性、正確性の高いモデルパフォーマンスを確保するには、データ中心のテスト方法論が不可欠となります。トレーニングデータに潜む意図しないバイアスは、差別的な結果につながる可能性があります。AI テストは、従来のソフトウェア QA には含まれない、公平性評価と緩和戦略を含む必要があります。ディープラーニングニューラルネットワークなど、一部の AI システムの複雑性と「ブラックボックス」的な性質は、内部の意思決定プロセスを不明瞭にし、検証と妥当性確認を複雑にする可能性があります。敵対的または攻撃的なセキュリティテストは推奨されるだけでなく、AI テクノロジにとって不可欠です。
 
-Because AI models can be fooled or manipulated by carefully crafted inputs (adversarial examples), organizations must employ dedicated adversarial robustness testing methodologies that extend well beyond standard functional tests. Without these specialized security assessments, AI systems remain vulnerable to subtle attacks that can compromise their integrity, reliability, and overall trustworthiness. 
+AI モデルは、巧妙に細工された入力 (敵対的サンプル) によって欺かれたり操作される可能性があるため、組織は標準的な機能テストをはるかに超える専用の敵対的堅牢性テスト方法論を採用する必要があります。これらの専門的なセキュリティ評価がなければ、AI システムは完全性、信頼性、全体的な信憑性を損なう可能性のある巧妙な攻撃に脆弱なままとなります。
 
-Finally all AI models live in ever-changing environments hence ongoing monitoring and automated re-validation of both data and model performance are essential to catch drift, emerging biases, or new vulnerabilities.
+最後に、すべての AI モデルは絶えず変化する環境で稼働しているため、ドリフト、新たなバイアス、新しい脆弱性を捕捉するには、データとモデルのパフォーマンスの両方を継続的に監視し、自動的に再検証することが不可欠です。
 
 ## OWASP AI テストガイドの目的とスコープ
-The OWASP AI Testing Guide is designed to serve as a comprehensive reference for software developers, architects, data analysts, researchers, and risk officers, ensuring that AI risks are systematically addressed throughout the product development lifecycle. It outlines a robust suite of tests, ranging from data‐centric validation and fairness assessments to adversarial robustness and continuous performance monitoring, that collectively provide documented evidence of risk validation and control. By following this guidance, teams can establish the level of trust required to confidently deploy AI systems into production, with verifiable assurances that potential biases, vulnerabilities, and performance degradations have been proactively identified and mitigated.
+OWASP AI テストガイドは、ソフトウェア開発者、アーキテクト、データアナリスト、研究者、リスク担当者にとっての包括的なリファレンスとして機能するように設計されており、製品開発ライフサイクル全体を通じて AI リスクが体系的に対処されることを確保します。データ中心バリデーションと公平性評価から敵対的堅牢性と継続的なパフォーマンス監視に至るまで、リスクのバリデーションとコントロールの文書化された証跡を総合的に提供する、堅牢なテストスイートを概説しています。このガイダンスに従うことで、チームは AI システムを自信を持って本番環境にデプロイするために必要なレベルの信頼を確立し、潜在的なバイアス、脆弱性、パフォーマンス低下が事前に特定されて緩和される、検証可能な保証を得ることが可能です。
 
 
 ### [こちら](https://github.com/OWASP/www-project-ai-testing-guide) から貢献を始めましょう
-
