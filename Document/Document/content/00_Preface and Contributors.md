@@ -1,46 +1,46 @@
 
-# OWASP AI Testing Guide 
+# OWASP AI テストガイド
 **Version 1.0 – 2025**
 
 ---
 
-## Preface  
+## 序文
 
-Artificial Intelligence is transforming how software is designed, deployed, and defended yet our ability to **test, verify, and assure AI systems** has not evolved at the same pace. Traditional application security testing is no longer sufficient for systems driven by models that learn, adapt, and behave unpredictably.  
+人工知能は、ソフトウェアの設計、デプロイ、防御の方法を変革していますが、**AI システムのテスト、検証、保証** の能力は同じペースで進化していません。従来のアプリケーションセキュリティテストは、学習、適応、予測不可能な動作をするモデルによって駆動されるシステムにはもはや十分ではありません。
 
-In 2023, OWASP released the *Top 10 for Large Language Model Applications*, the first global effort to map common AI risks. The **OWASP AI Testing Guide (AITG)** takes the next step: providing a **structured, repeatable, and community-driven methodology** for evaluating the **security, safety, and trustworthiness** of AI systems across their entire lifecycle, from data collection and model training to deployment, monitoring, and runtime behavior.  
+2023 年、OWASP は *Top 10 大規模言語モデルアプリケーション* をリリースしました。これは一般的に AI リスクをマップする初の世界的な取り組みです。**OWASP AI テストガイド (AITG)** は次のステップに進み、データ収集とモデルトレーニングから、デプロイメント、監視、実行時動作に至るまで、ライフサイクル全体にわたってAI システムの **セキュリティ、安全性、信頼性** を評価するための **構造化され、反復可能で、コミュニティ主導の方法論** を提供します。
 
-While its foundations draw on the OWASP Web Security Testing Guide (WSTG) and the NIST AI Risk Management Framework, the AITG extends beyond web or application testing. It introduces an integrated approach combining **AI red-teaming, adversarial testing, risk-based validation, and continuous assurance**, aligned with global standards such as ISO/IEC 42001, ISO/IEC 5338, NIST AI 100-2, and the EU AI Act.  
+これは OWASP Web Security Testing Guide (WSTG) と NIST AI Risk Management Framework を基盤にしていますが、AITG はウェブテストやアプリケーションテストを超えて拡大します。ISO/IEC 42001、ISO/IEC 5338、NIST AI 100-2、EU AI 法などのグローバル標準に準拠した **AI レッドチーミング、敵対的テスト、リスクベースのバリデーション、継続的保証** を組み合わせた統合アプローチを導入します。
 
-This guide is written for **security testers, ML engineers, red teamers, risk managers, and auditors** who must translate high-level AI governance principles into **practical, testable controls**. Each test case links objectives, payloads, and observable responses to remediation guidance, enabling consistent assessment and evidence-based reporting.  
+このガイドは、高レベル AI ガバナンス原則を **実用的でテスト可能なコントロール** に変換する必要がある **セキュリティテスト担当者、ML エンジニア、レッドチーム担当者、リスクマネージャ、監査担当者** 向けに執筆されています。各テストケースは、目標、ペイロード、観察可能な応答を対策ガイダンスにリンクし、一貫した評価と証跡ベースのレポート作成を可能にします。
 
-**Version 1.0** introduces four testing categories that together form the OWASP AI Testing Framework:  
+**Version 1.0** は OWASP AI テストフレームワークを一体に形作る四つのテストカテゴリを導入しています。
 
-1️⃣ **AI Application Testing** – validating prompts, interfaces, and integrated logic.  
-2️⃣ **AI Model Testing** – probing model robustness, alignment, and adversarial resistance.  
-3️⃣ **AI Data Testing** – assessing data integrity, privacy, and provenance.  
-4️⃣ **AI Infrastructure Testing** – evaluating pipeline, orchestration, and runtime environments.  
+1️⃣ **AI アプリケーションテスト** – プロンプト、インタフェース、統合ロジックの検証。  
+2️⃣ **AI モデルテスト** – モデルの堅牢性、アライメント、敵対的耐性の調査。  
+3️⃣ **AI データテスト** – データの完全性、プライバシー、来歴の評価。  
+4️⃣ **AI インフラストラクチャテスト** – パイプライン、オーケストレーション、ランタイム環境の評価。  
 
-Each category follows a consistent process:  
+各カテゴリは一貫したプロセスに従います。
 
-> **Define Objective → Execute Test → Interpret Response → Recommend Remediation**
+> **目標の定義 → テストの実行 → レスポンスの解釈 → 改善策の推奨**
 
-Rather than prescribing specific tools, the AITG defines a **standard for methodology** a common language for measuring the resilience of AI systems. The framework is designed to evolve continuously, informed by real-world testing, academic research, and community feedback.  
+特定のツールを規定するのではなく、AITG は AI システムの耐性を測定するための共通言語である **方法論の標準** を定義します。このフレームワークは、実世界のテスト、学術研究、コミュニティからのフィードバックに基づいて、継続的に進化するように設計されています。
 
-We would like to acknowledge the **OWASP Foundation**, the contributors of the *Top 10 for LLM Applications* and *GenAI Red Teaming Guide*, and the NIST AI RMF and AI 100-2e teams for their foundational work. Most importantly, we thank the OWASP community and practitioners who dedicate time to testing, breaking, and strengthening AI systems in the open.  
+**OWASP Foundation**、*Top 10 for LLM Applications* および *GenAI Red Teaming Guide* の貢献者、NIST AI RMF および AI 100-2e チームに、その基礎となる取り組みに感謝します。何よりも、オープンに AI システムのテスト、破壊、強化に時間を割いてくださる OWASP コミュニティと実践者の皆様に感謝します。
 
-The OWASP AI Testing Guide is a **living document**. It will evolve with new research, regulatory changes, and lessons learned from field testing. We invite you to contribute through GitHub issues, pull requests, and community discussions so that together we can make **AI secure, reliable, and trustworthy by design**.  
+OWASP AI テストガイドは **活動中のドキュメント** です。新たな研究、規制の変化、フィールドテストから学んだ教訓で進化していくでしょう。GitHub issues、プルリクエスト、コミュニティの議論を通じて協力をお願いします。一緒に **AI を設計段階から安全で、信頼でき、信用できる** ものにしましょう。
 
 Onward,  
 **Matteo Meucci & Marco Morana**  
 *Project Co-Leads, OWASP AI Testing Guide*  
 
 
-# AI Testing Guide Authors and Contributors 
+# AI テストガイドの著者および貢献者
 
-We would like to thank you all the people involved in the project.
+プロジェクトに関わった皆様に感謝いたします。
 
-Authors:
+著者:
 - Matteo Meucci
 - Marco Morana
 - Federico Dotta
@@ -59,15 +59,15 @@ Authors:
 - Martí Jordà Roca
 - Sita Ram Sai
 
-Contributors:
-- Cecil Su 
-- Melvin Tan 
-- Sebastien Gioria 
+貢献者:
+- Cecil Su
+- Melvin Tan
+- Sebastien Gioria
 - Andrea Fukushima
-- Giovanni Cerrato 
-- Kunal Sinha 
+- Giovanni Cerrato
+- Kunal Sinha
 - Jacob Beers
 - Joey Melo
 
-Acknowledgements
-We also want to thank everyone in the wider OWASP AITG community — especially those in the Slack channel — who shared feedback, ideas, or encouragement along the way. Your input helped shape this project.
+謝辞  
+これまでにフィードバック、アイデア、励ましを共有してくださった OWASP AITG コミュニティ、特に Slack チャンネル、の皆様にも感謝いたします。皆様のご意見はこのプロジェクトの発展に貢献しました。
