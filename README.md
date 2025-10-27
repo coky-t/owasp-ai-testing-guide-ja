@@ -17,6 +17,7 @@ This is the unofficial Japanese translation of the [OWASP AI Testing Guide](http
 * [概要](Document/index.md)
 * [リーダー](Document/leaders.md)
 * [目次](Document/Document/README.md)
+* [序文と貢献者](Document/Document/content/00_Preface%20and%20Contributors.md)
 
 ### 1. [はじめに](Document/Document/content/1.0_Introduction.md)
 
