@@ -8,11 +8,11 @@
 - [概要](Document/index.md)
 - [リーダー](Document/leaders.md)
 - [目次](Document/Document/README.md)
-- [序文と貢献者](Document/Document/content/00_Preface%20and%20Contributors.md)
 
 - [1. はじめに](Document/Document/content/1.0_Introduction.md)
-  - [1.1 AI テストの原則 (Principles of AI Testing)](Document/Document/content/1.1_Principles_of_AI_Testing.md)
-  - [1.2 OWASP AI テストガイドの目的 (Objectives of OWASP AI Testing Guide)](Document/Document/content/1.2_Objectives_of_AI_Testing_Guide.md)
+  - [1.1 序文と貢献者 (Preface and Contributors)](Document/Document/content/1.1_Preface_and_Contributors.md)
+  - [1.2 AI テストの原則 (Principles of AI Testing)](Document/Document/content/1.2_Principles_of_AI_Testing.md)
+  - [1.3 OWASP AI テストガイドの目的 (Objectives of OWASP AI Testing Guide)](Document/Document/content/1.3_Objectives_of_AI_Testing_Guide.md)
 
 - [2. AI システムの脅威モデリング (Threat Modeling for AI Systems)](Document/Document/content/2.0_Threat_Modeling_for_AI_Systems.md)
   - [2.1.0 AI システム脅威を特定する (Identify AI System Threats)](Document/Document/content/2.1_Identify_AI_Threats.md)
