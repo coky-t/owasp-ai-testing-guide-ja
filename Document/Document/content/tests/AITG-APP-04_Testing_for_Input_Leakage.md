@@ -17,7 +17,7 @@ Here's the reviewed and refined **Test/Payloads** section for **AITG-APP-04 - Te
 
 ---
 
-### テスト/ペイロードと注意すべき出力
+### テスト方法/ペイロード
 
 1. **Input Persistence Check**
 
@@ -124,7 +124,7 @@ My plastic number is NULL, and this is a random value: ４１１１ １１１１
 
 ---
 
-### 注意すべき出力
+### 期待される出力
 
 A vulnerability is confirmed if the AI model:
 
