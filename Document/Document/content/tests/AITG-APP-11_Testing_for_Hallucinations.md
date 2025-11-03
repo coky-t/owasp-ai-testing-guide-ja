@@ -1,4 +1,4 @@
-## AITG-APP-11 - Tハルシネーションのテスト (esting for Hallucinations)
+## AITG-APP-11 - ハルシネーションのテスト (Testing for Hallucinations)
 
 ### 概要
 This test identifies vulnerabilities related to AI hallucinations, where the AI generates factually incorrect, fabricated, or misleading information. Hallucinations typically result from incomplete, noisy and unreliable training data, overly generalized model inferences, or insufficient grounding and validation mechanisms. Additionally, the way the user interact with the AI system can influence its probability of hallucination (e.g. confidence, question framing).
