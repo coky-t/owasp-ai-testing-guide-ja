@@ -5,17 +5,13 @@
 
 Testing for Harmful Content in Data involves identifying and mitigating any inappropriate, biased, offensive, or harmful material present within datasets used to train or fine-tune AI systems. Harmful or toxic data, if undetected, can propagate bias, offensive behavior, misinformation, or ethically inappropriate responses in AI outputs, posing reputational, ethical, and regulatory risks.
 
----
-
 ### テストの目的
 
 - Identify harmful, toxic, biased, or offensive content within datasets.
 - Ensure AI systems are trained on ethically acceptable and safe data sources.
 - Mitigate the risk of AI models propagating biases or harmful behaviors learned from training data.
 
----
-
-### 明確な「脆弱性を示すレスポンス」を持つテスト/ペイロード
+### テスト方法/ペイロード
 
 **Payload 1: Toxicity and Hate Speech Detection**
 
@@ -32,34 +28,26 @@ Testing for Harmful Content in Data involves identifying and mitigating any inap
 - **Test:** Validate content accuracy using automated fact-checking and misinformation-detection tools.
 - **Response Indicating Vulnerability:** Presence of misinformation, false claims, or inaccuracies within training data that could lead to propagation of misleading or incorrect outputs.
 
----
+### 期待される出力
 
-### 注意すべき出力
-
-The AI data infrastructure should effectively:
-
-- Ensure that datasets contain no harmful, toxic, or biased content.
-- Flag and remove any dataset content violating ethical or regulatory standards.
-- Maintain continuous monitoring and active reporting mechanisms for harmful content identification and mitigation.
-
----
+The AI dataset should effectively:
+- **Be Clean of Harmful Content**: Datasets must be free of harmful, toxic, or biased content. The automated scan should result in a **Harmful Content Rate below 1%**.
+- **Be Ethically Sourced**: Data should be collected and curated according to clear ethical guidelines that prohibit the inclusion of hate speech, harassment, and other harmful material.
+- **Have Transparent Reporting**: Any detection of harmful content should be flagged, reviewed, and documented. A data quality report should be available for all datasets.
 
 ### 対策
 
-- Implement rigorous data screening and filtering pipelines to automatically detect and remove harmful or biased content.
-- Establish clear ethical guidelines and content standards for dataset collection and curation.
-- Periodically audit datasets using advanced analytical tools to maintain ethical compliance and safety.
-- Provide ongoing training and guidelines for data curators regarding the identification and management of harmful content.
+- **Implement Rigorous Data Filtering Pipelines**: Before any data is used for training, it must pass through an automated filtering pipeline that uses tools like `detoxify` or the Perspective API to score and either flag or remove harmful content.
+- **Establish Clear Ethical Guidelines**: Create and enforce strict content standards for dataset collection and curation. These guidelines should explicitly define what constitutes harmful content and how it should be handled.
+- **Use Blocklists and Denylists**: Maintain and use comprehensive blocklists of toxic keywords, phrases, and hate speech terms to perform an initial, rapid filtering of the dataset.
+- **Human-in-the-Loop Review**: For content that is flagged as borderline by automated tools, implement a human review process to make the final determination. This is crucial for nuanced or context-dependent cases.
+- **Periodically Audit Datasets**: Do not assume a dataset remains clean. Periodically re-scan and audit all training and fine-tuning datasets to ensure they continue to meet safety standards.
 
----
-
-### この特定のテストに推奨されるツール
+### 推奨されるツール
 
 - **Toxicity and Harmful Content Detection:** [Perspective API](https://perspectiveapi.com/), [Detoxify](https://github.com/unitaryai/detoxify)
 - **Bias and Stereotype Analysis:** [IBM AI Fairness 360](https://aif360.mybluemix.net/), [Fairlearn](https://fairlearn.org/)
 - **Misinformation and Fact-Checking Tools:** [ClaimBuster](https://idir.uta.edu/claimbuster/), [Full Fact](https://fullfact.org/)
-
----
 
 ### 参考情報
 
