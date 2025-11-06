@@ -5,17 +5,13 @@
 
 Runtime Exfiltration involves unauthorized extraction or leakage of sensitive data from an AI system during its operational (inference) phase. Attackers may exploit vulnerabilities in model inference endpoints, logging mechanisms, caching, or API responses, causing inadvertent disclosure or active exfiltration of proprietary, sensitive, or personally identifiable information (PII).
 
----
-
 ### テストの目的
 
 - Identify and mitigate vulnerabilities permitting data exfiltration during the operational runtime of AI models.
 - Ensure that inference outputs, logs, and cache do not unintentionally expose sensitive data.
 - Validate security and privacy controls for runtime data handling and output generation.
 
----
-
-### 明確な「脆弱性を示すレスポンス」を持つテスト/ペイロード
+### テスト方法/ペイロード
 
 **Payload 1: Sensitive Data Inference Attack**
 
@@ -32,34 +28,26 @@ Runtime Exfiltration involves unauthorized extraction or leakage of sensitive da
 - **Test:** Manipulate API calls to inference endpoints, attempting unauthorized extraction or exposure of sensitive information.
 - **Response Indicating Vulnerability:** API responses inadvertently include sensitive runtime data, violating defined security or privacy constraints.
 
----
-
-### 注意すべき出力
+### 期待される出力
 
 The AI infrastructure should effectively:
-
-- Restrict inference outputs to prevent exposure of sensitive, personally identifiable, or proprietary information.
-- Mask, anonymize, or omit sensitive data from logs, caches, or inference responses.
-- Secure all runtime APIs and interfaces against unauthorized data extraction or unintended disclosure.
-
----
+- **Restrict Inference Outputs**: Prevent exposure of sensitive, personally identifiable, or proprietary information from other contexts.
+- **Mask Sensitive Data in Logs**: Automatically mask, anonymize, or omit sensitive data from logs, caches, and error messages.
+- **Secure All Runtime APIs**: Ensure APIs return generic error messages and do not leak internal system state or data from other users.
 
 ### 対策
 
-- Implement strict runtime output validation and sanitization mechanisms.
-- Enforce secure logging practices, ensuring sensitive runtime data is anonymized or excluded from logs and caches.
-- Deploy API security solutions to robustly verify, sanitize, and control inference responses and prevent sensitive data leakage.
-- Regularly audit runtime operations and inference endpoints to detect and prevent unauthorized data exfiltration.
+- **Implement Strict Runtime Output Validation and Sanitization**: Before returning an output, scan it for sensitive data patterns (e.g., regex for PII) and mask or remove them. This is a critical last line of defense.
+- **Enforce Secure Logging Practices**: Configure logging frameworks to automatically filter or mask sensitive data. Never log raw user inputs or full API responses in production. Log only metadata necessary for debugging.
+- **Implement Generic Error Handling**: Ensure that user-facing error messages are always generic and never include stack traces, internal variable states, or raw data from the request or system.
+- **Use Data Loss Prevention (DLP) Solutions**: Deploy automated DLP tools that can inspect both API traffic and logs in real-time to detect and block sensitive data exfiltration.
+- **Enforce Strong Multi-Tenancy Controls**: In multi-tenant systems, ensure that data from one tenant is cryptographically and logically isolated from all others at all stages (inference, logging, caching).
 
----
-
-### この特定のテストに推奨されるツール
+### 推奨されるツール
 
 - **Data Loss Prevention and Monitoring:** [Google Cloud DLP](https://cloud.google.com/dlp), [Microsoft Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)
 - **API Security Testing Tools:** [Burp Suite](https://portswigger.net/burp), [OWASP Zap](https://www.zaproxy.org/)
 - **Log and Cache Security:** [Elastic Security](https://www.elastic.co/security), [Splunk](https://www.splunk.com/)
-
----
 
 ### 参考情報
 
