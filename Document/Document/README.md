@@ -12,25 +12,23 @@
 
 ## 2. [AI システムの脅威モデリング (Threat Modeling AI Systems)](content/2.0_Threat_Modeling_for_AI_Systems.md)
 
-- 2.1.0 [AI システム脅威を特定する (Identify AI System Threats)](content/2.1_Identify_AI_Threats.md)
+- 2.1 [AI システム脅威を特定する (Identify AI System Threats)](content/2.1_Identify_AI_Threats.md)
 
 - 2.1.1 [OWASP AI 脅威を AI アーキテクチャコンポーネントにマップする (Map OWASP AI Threats To AI Architectural Components)](content/2.1.1_Architectural_Mapping_of_OWASP_Threats.md)
 
 - 2.1.2 [AI システム 責任ある AI (RAI)/信頼できる AI の脅威を特定する (Identify AI System Responsible AI (RAI)/Trustworthy AI Threats)](content/2.1.2_Identify_RAI_threats.md)
 
-- 2.2.1 [付録 A: SAIF (Secure AI Framework) を使用する理由 (Appendix A: Rationale For Using SAIF (Secure AI Framework))](content/2.2_Appendix_A.md)
+- 2.2 [付録 A: SAIF (Secure AI Framework) を使用する理由 (Appendix A: Rationale For Using SAIF (Secure AI Framework))](content/2.2_Appendix_A.md)
 
-- 2.2.2 [付録 B: 分散型、不変的、一時的 (DIE) 脅威の特定 (Appendix B: Distributed, Immutable, Ephemeral (DIE) Threat Identification)](content/2.2_Appendix_B.md)
+- 2.2 [付録 B: 分散型、不変的、一時的 (DIE) 脅威の特定 (Appendix B: Distributed, Immutable, Ephemeral (DIE) Threat Identification)](content/2.2_Appendix_B.md)
 
-- 2.2.3 [付録 C: 安全な AI システムのためのリスクライフサイクル (Appendix C: Risk Lifecycle for Secure AI Systems)](content/2.2_Appendix_C.md)
+- 2.2 [付録 C: 安全な AI システムのためのリスクライフサイクル (Appendix C: Risk Lifecycle for Secure AI Systems)](content/2.2_Appendix_C.md)
 
-- 2.2.4 [付録 D: AI アーキテクチャコンポーネントへの脅威の列挙 (Appendix D: Threat Enumeration to AI Architecture Components)](content/2.2_Appendix_D.md)
+- 2.2 [付録 D: AI アーキテクチャコンポーネントへの脅威の列挙 (Appendix D: Threat Enumeration to AI Architecture Components)](content/2.2_Appendix_D.md)
 
-- 2.2.5 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](content/2.2_Appendix_E.md)
+- 2.2 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](content/2.2_Appendix_E.md)
 
 ## 3. [OWASP AI テストガイドフレームワーク (OWASP AI Testing Guide Framework)](content/3.0_OWASP_AI_Testing_Guide_Framework.md)
-
-- [テストの制限と要件 (Testing Limitations and Requirements)](content/3.0_Testing_Limitations_and_Requirements.md)
 
 - 3.1 🟦 [AI アプリケーションテスト (AI Application Testing)](content/3.1_AI_Application_Testing.md)
 
@@ -88,6 +86,8 @@
 | AITG-DAT-03   | [データセットの多様性とカバレッジのテスト (Testing for Dataset Diversity & Coverage)](content/tests/AITG-DAT-03_Testing_for_Dataset_Diversity_and_Coverage.md) |
 | AITG-DAT-04   | [データ内の有害なコンテンツのテスト (Testing for Harmful Content in Data)](content/tests/AITG-DAT-04_Testing_for_Harmful_Content_in_Data.md) |
 | AITG-DAT-05   | [データ最小化と同意のテスト (Testing for Data Minimization & Consent)](content/tests/AITG-DAT-05_Testing_for_Data_Minimization_and_Consent.md) |
+
+
 
 ## 4. [ドメイン固有テスト (Domain Specific Testing)](content/4.0_Domain_Specific_Testing.md)
 
