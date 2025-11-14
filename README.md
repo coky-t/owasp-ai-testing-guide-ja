@@ -30,69 +30,61 @@ This is the unofficial Japanese translation of the [OWASP AI Testing Guide](http
 * 2.1.1 [OWASP AI 脅威を AI アーキテクチャコンポーネントにマップする (Map OWASP AI Threats To AI Architectural Components)](Document/Document/content/2.1.1_Architectural_Mapping_of_OWASP_Threats.md)
 * 2.1.2 [AI システム 責任ある AI (RAI)/信頼できる AI の脅威を特定する (Identify AI System Responsible AI (RAI)/Trustworthy AI Threats)](Document/Document/content/2.1.2_Identify_RAI_threats.md)
 
-* 2.2 [付録 A: SAIF (Secure AI Framework) を使用する理由 (Appendix A: Rationale For Using SAIF (Secure AI Framework))](Document/Document/content/2.2_Appendix_A.md)
-* 2.2 [付録 B: 分散型、不変的、一時的 (DIE) 脅威の特定 (Appendix B: Distributed, Immutable, Ephemeral (DIE) Threat Identification)](Document/Document/content/2.2_Appendix_B.md)
-* 2.2 [付録 C: 安全な AI システムのためのリスクライフサイクル (Appendix C: Risk Lifecycle for Secure AI Systems)](Document/Document/content/2.2_Appendix_C.md)
-* 2.2 [付録 D: AI アーキテクチャコンポーネントへの脅威の列挙 (Appendix D: Threat Enumeration to AI Architecture Components)](Document/Document/content/2.2_Appendix_D.md)
-* 2.2 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](Document/Document/content/2.2_Appendix_E.md)
-
 ### 3. [OWASP AI テストガイドフレームワーク (OWASP AI Testing Guide Framework)](Document/Document/content/3.0_OWASP_AI_Testing_Guide_Framework.md)
 
 #### 3.1 [AI アプリケーションテスト (AI Application Testing)](Document/Document/content/3.1_AI_Application_Testing.md)
 
-| テスト ID     | テスト名とリンク |
-|---------------|------------------|
-| AITG-APP-01   | [プロンプトインジェクションのテスト (Testing for Prompt Injection)](Document/Document/content/tests/AITG-APP-01_Testing_for_Prompt_Injection.md) |
-| AITG-APP-02   | [間接プロンプトインジェクションのテスト (Testing for Indirect Prompt Injection)](Document/Document/content/tests/AITG-APP-02_Testing_for_Indirect_Prompt_Injection.md) |
-| AITG-APP-03   | [機密データ漏洩のテスト (Testing for Sensitive Data Leak)](Document/Document/content/tests/AITG-APP-03_Testing_for_Sensitive_Data_Leak.md) |
-| AITG-APP-04   | [入力漏洩のテスト (Testing for Input Leakage)](Document/Document/content/tests/AITG-APP-04_Testing_for_Input_Leakage.md) |
-| AITG-APP-05   | [安全でない出力のテスト (Testing for Unsafe Outputs)](Document/Document/content/tests/AITG-APP-05_Testing_for_Unsafe_Outputs.md) |
-| AITG-APP-06   | [エージェント動作限界のテスト (Testing for Agentic Behavior Limits)](Document/Document/content/tests/AITG-APP-06_Testing_for_Agentic_Behavior_Limits.md) |
-| AITG-APP-07   | [プロンプト開示のテスト (Testing for Prompt Disclosure)](Document/Document/content/tests/AITG-APP-07_Testing_for_Prompt_Disclosure.md) |
-| AITG-APP-08   | [エンベディング操作のテスト (Testing for Embedding Manipulation)](Document/Document/content/tests/AITG-APP-08_Testing_for_Embedding_Manipulation.md) |
-| AITG-APP-09   | [モデル抽出のテスト (Testing for Model Extraction)](Document/Document/content/tests/AITG-APP-09_Testing_for_Model_Extraction.md) |
-| AITG-APP-10   | [コンテンツバイアスのテスト (Testing for Content Bias)](Document/Document/content/tests/AITG-APP-10_Testing_for_Content_Bias.md) |
-| AITG-APP-11   | [ハルシネーションのテスト (Testing for Hallucinations)](Document/Document/content/tests/AITG-APP-11_Testing_for_Hallucinations.md) |
-| AITG-APP-12   | [有害な出力のテスト (Testing for Toxic Output)](Document/Document/content/tests/AITG-APP-12_Testing_for_Toxic_Output.md) |
-| AITG-APP-13   | [AI への過度な依存のテスト (Testing for Over-Reliance on AI)](Document/Document/content/tests/AITG-APP-13_Testing_for_Over-Reliance_on_AI.md) |
-| AITG-APP-14   | [説明可能性と解釈可能性のテスト (Testing for Explainability and Interpretability)](Document/Document/content/tests/AITG-APP-14_Testing_for_Explainability_and_Interpretability.md) |
+- 3.1.1 | AITG-APP-01   | [プロンプトインジェクションのテスト (Testing for Prompt Injection)](Document/Document/content/tests/AITG-APP-01_Testing_for_Prompt_Injection.md) |
+- 3.1.2 | AITG-APP-02   | [間接プロンプトインジェクションのテスト (Testing for Indirect Prompt Injection)](Document/Document/content/tests/AITG-APP-02_Testing_for_Indirect_Prompt_Injection.md) |
+- 3.1.3 | AITG-APP-03   | [機密データ漏洩のテスト (Testing for Sensitive Data Leak)](Document/Document/content/tests/AITG-APP-03_Testing_for_Sensitive_Data_Leak.md) |
+- 3.1.4 | AITG-APP-04   | [入力漏洩のテスト (Testing for Input Leakage)](Document/Document/content/tests/AITG-APP-04_Testing_for_Input_Leakage.md) |
+- 3.1.5 | AITG-APP-05   | [安全でない出力のテスト (Testing for Unsafe Outputs)](Document/Document/content/tests/AITG-APP-05_Testing_for_Unsafe_Outputs.md) |
+- 3.1.6 | AITG-APP-06   | [エージェント動作限界のテスト (Testing for Agentic Behavior Limits)](Document/Document/content/tests/AITG-APP-06_Testing_for_Agentic_Behavior_Limits.md) |
+- 3.1.7 | AITG-APP-07   | [プロンプト開示のテスト (Testing for Prompt Disclosure)](Document/Document/content/tests/AITG-APP-07_Testing_for_Prompt_Disclosure.md) |
+- 3.1.8 | AITG-APP-08   | [エンベディング操作のテスト (Testing for Embedding Manipulation)](Document/Document/content/tests/AITG-APP-08_Testing_for_Embedding_Manipulation.md) |
+- 3.1.9 | AITG-APP-09   | [モデル抽出のテスト (Testing for Model Extraction)](Document/Document/content/tests/AITG-APP-09_Testing_for_Model_Extraction.md) |
+- 3.1.10 | AITG-APP-10   | [コンテンツバイアスのテスト (Testing for Content Bias)](Document/Document/content/tests/AITG-APP-10_Testing_for_Content_Bias.md) |
+- 3.1.11 | AITG-APP-11   | [ハルシネーションのテスト (Testing for Hallucinations)](Document/Document/content/tests/AITG-APP-11_Testing_for_Hallucinations.md) |
+- 3.1.12 | AITG-APP-12   | [有害な出力のテスト (Testing for Toxic Output)](Document/Document/content/tests/AITG-APP-12_Testing_for_Toxic_Output.md) |
+- 3.1.13 | AITG-APP-13   | [AI への過度な依存のテスト (Testing for Over-Reliance on AI)](Document/Document/content/tests/AITG-APP-13_Testing_for_Over-Reliance_on_AI.md) |
+- 3.1.14 | AITG-APP-14   | [説明可能性と解釈可能性のテスト (Testing for Explainability and Interpretability)](Document/Document/content/tests/AITG-APP-14_Testing_for_Explainability_and_Interpretability.md) |
 
 #### 3.2 [AI モデルテスト (AI Model Testing)](Document/Document/content/3.2_AI_Model_Testing.md)
 
-| テスト ID     | テスト名とリンク |
-|---------------|------------------|
-| AITG-MOD-01   | [回避攻撃のテスト (Testing for Evasion Attacks)](Document/Document/content/tests/AITG-MOD-01_Testing_for_Evasion_Attacks.md) |
-| AITG-MOD-02   | [ランタイムモデルポイズニングのテスト (Testing for Runtime Model Poisoning)](Document/Document/content/tests/AITG-MOD-02_Testing_for_Runtime_Model_Poisoning.md) |
-| AITG-MOD-03   | [汚染されたトレーニングセットのテスト (Testing for Poisoned Training Sets)](Document/Document/content/tests/AITG-MOD-03_Testing_for_Poisoned_Training_Sets.md) |
-| AITG-MOD-04   | [メンバーシップ推論のテスト (Testing for Membership Inference)](Document/Document/content/tests/AITG-MOD-04_Testing_for_Membership_Inference.md) |
-| AITG-MOD-05   | [反転攻撃のテスト (Testing for Inversion Attacks)](Document/Document/content/tests/AITG-MOD-05_Testing_for_Inversion_Attacks.md) |
-| AITG-MOD-06   | [新しいデータに対する頑健性のテスト (Testing for Robustness to New Data)](Document/Document/content/tests/AITG-MOD-06_Testing_for_Robustness_to_New_Data.md) |
-| AITG-MOD-07   | [目標との整合のテスト (Testing for Goal Alignment)](Document/Document/content/tests/AITG-MOD-07_Testing_for_Goal_Alignment.md) |
+- 3.2.1 | AITG-MOD-01   | [回避攻撃のテスト (Testing for Evasion Attacks)](Document/Document/content/tests/AITG-MOD-01_Testing_for_Evasion_Attacks.md) |
+- 3.2.2 | AITG-MOD-02   | [ランタイムモデルポイズニングのテスト (Testing for Runtime Model Poisoning)](Document/Document/content/tests/AITG-MOD-02_Testing_for_Runtime_Model_Poisoning.md) |
+- 3.2.3 | AITG-MOD-03   | [汚染されたトレーニングセットのテスト (Testing for Poisoned Training Sets)](Document/Document/content/tests/AITG-MOD-03_Testing_for_Poisoned_Training_Sets.md) |
+- 3.2.4 | AITG-MOD-04   | [メンバーシップ推論のテスト (Testing for Membership Inference)](Document/Document/content/tests/AITG-MOD-04_Testing_for_Membership_Inference.md) |
+- 3.2.5 | AITG-MOD-05   | [反転攻撃のテスト (Testing for Inversion Attacks)](Document/Document/content/tests/AITG-MOD-05_Testing_for_Inversion_Attacks.md) |
+- 3.2.6 | AITG-MOD-06   | [新しいデータに対する頑健性のテスト (Testing for Robustness to New Data)](Document/Document/content/tests/AITG-MOD-06_Testing_for_Robustness_to_New_Data.md) |
+- 3.2.7 | AITG-MOD-07   | [目標との整合のテスト (Testing for Goal Alignment)](Document/Document/content/tests/AITG-MOD-07_Testing_for_Goal_Alignment.md) |
 
 #### 3.3 [AI インフラストラクチャテスト (AI Infrastructure Testing)](Document/Document/content/3.3_AI_Infrastructure_Testing.md)
 
-| テスト ID     | テスト名とリンク |
-|---------------|------------------|
-| AITG-INF-01   | [サプライチェーン改竄のテスト (Testing for Supply Chain Tampering)](Document/Document/content/tests/AITG-INF-01_Testing_for_Supply_Chain_Tampering.md) |
-| AITG-INF-02   | [リソース枯渇のテスト (Testing for Resource Exhaustion)](Document/Document/content/tests/AITG-INF-02_Testing_for_Resource_Exhaustion.md) |
-| AITG-INF-03   | [プラグイン境界違反のテスト (Testing for Plugin Boundary Violations)](Document/Document/content/tests/AITG-INF-03_Testing_for_Plugin_Boundary_Violations.md) |
-| AITG-INF-04   | [ケイパビリティ不正使用のテスト (Testing for Capability Misuse)](Document/Document/content/tests/AITG-INF-04_Testing_for_Capability_Misuse.md) |
-| AITG-INF-05   | [ファインチューニングポイズニングのテスト (Testing for Fine-tuning Poisoning)](Document/Document/content/tests/AITG-INF-05_Testing_for_Fine-tuning_Poisoning.md) |
-| AITG-INF-06   | [開発時のモデル窃取のテスト (Testing for Dev-Time Model Theft)](Document/Document/content/tests/AITG-INF-06_Testing_for_Dev-Time_Model_Theft.md) |
+- 3.3.1 | AITG-INF-01   | [サプライチェーン改竄のテスト (Testing for Supply Chain Tampering)](Document/Document/content/tests/AITG-INF-01_Testing_for_Supply_Chain_Tampering.md) |
+- 3.3.2 | AITG-INF-02   | [リソース枯渇のテスト (Testing for Resource Exhaustion)](Document/Document/content/tests/AITG-INF-02_Testing_for_Resource_Exhaustion.md) |
+- 3.3.3 | AITG-INF-03   | [プラグイン境界違反のテスト (Testing for Plugin Boundary Violations)](Document/Document/content/tests/AITG-INF-03_Testing_for_Plugin_Boundary_Violations.md) |
+- 3.3.4 | AITG-INF-04   | [ケイパビリティ不正使用のテスト (Testing for Capability Misuse)](Document/Document/content/tests/AITG-INF-04_Testing_for_Capability_Misuse.md) |
+- 3.3.5 | AITG-INF-05   | [ファインチューニングポイズニングのテスト (Testing for Fine-tuning Poisoning)](Document/Document/content/tests/AITG-INF-05_Testing_for_Fine-tuning_Poisoning.md) |
+- 3.3.6 | AITG-INF-06   | [開発時のモデル窃取のテスト (Testing for Dev-Time Model Theft)](Document/Document/content/tests/AITG-INF-06_Testing_for_Dev-Time_Model_Theft.md) |
 
 #### 3.4 [AIデータテスト (AI Data Testing)](Document/Document/content/3.4_AI_Data_Testing.md)
 
-| テスト ID     | テスト名とリンク |
-|---------------|------------------|
-| AITG-DAT-01   | [トレーニングデータ露出のテスト (Testing for Training Data Exposure)](Document/Document/content/tests/AITG-DAT-01_Testing_for_Training_Data_Exposure.md) |
-| AITG-DAT-02   | [ランタイム流出のテスト (Testing for Runtime Exfiltration)](Document/Document/content/tests/AITG-DAT-02_Testing_for_Runtime_Exfiltration.md) |
-| AITG-DAT-03   | [データセットの多様性とカバレッジのテスト (Testing for Dataset Diversity & Coverage)](Document/Document/content/tests/AITG-DAT-03_Testing_for_Dataset_Diversity_and_Coverage.md) |
-| AITG-DAT-04   | [データ内の有害なコンテンツのテスト (Testing for Harmful Content in Data)](Document/Document/content/tests/AITG-DAT-04_Testing_for_Harmful_Content_in_Data.md) |
-| AITG-DAT-05   | [データ最小化と同意のテスト (Testing for Data Minimization & Consent)](Document/Document/content/tests/AITG-DAT-05_Testing_for_Data_Minimization_and_Consent.md) |
+- 3.4.1 | AITG-DAT-01   | [トレーニングデータ露出のテスト (Testing for Training Data Exposure)](Document/Document/content/tests/AITG-DAT-01_Testing_for_Training_Data_Exposure.md) |
+- 3.4.2 | AITG-DAT-02   | [ランタイム流出のテスト (Testing for Runtime Exfiltration)](Document/Document/content/tests/AITG-DAT-02_Testing_for_Runtime_Exfiltration.md) |
+- 3.4.3 | AITG-DAT-03   | [データセットの多様性とカバレッジのテスト (Testing for Dataset Diversity & Coverage)](Document/Document/content/tests/AITG-DAT-03_Testing_for_Dataset_Diversity_and_Coverage.md) |
+- 3.4.4 | AITG-DAT-04   | [データ内の有害なコンテンツのテスト (Testing for Harmful Content in Data)](Document/Document/content/tests/AITG-DAT-04_Testing_for_Harmful_Content_in_Data.md) |
+- 3.4.5 | AITG-DAT-05   | [データ最小化と同意のテスト (Testing for Data Minimization & Consent)](Document/Document/content/tests/AITG-DAT-05_Testing_for_Data_Minimization_and_Consent.md) |
 
-### 4. [ドメイン固有テスト (Domain Specific Testing)](Document/Document/content/4.0_Domain_Specific_Testing.md)
+#### 4. [付録と参考情報 (Appendixes and References)](Document/Document/content/4.0_Appendix_and_References.md)
 
-* [参考情報](Document/Document/content/References.md)
+- 4.1 [付録 A: SAIF (Secure AI Framework) を使用する理由 (Appendix A: Rationale For Using SAIF (Secure AI Framework))](Document/Document/content/4.1_Appendix_A.md)
+- 4.2 [付録 B: 分散型、不変的、一時的 (DIE) 脅威の特定 (Appendix B: Distributed, Immutable, Ephemeral (DIE) Threat Identification)](Document/Document/content/4.2_Appendix_B.md)
+- 4.3 [付録 C: 安全な AI システムのためのリスクライフサイクル (Appendix C: Risk Lifecycle for Secure AI Systems)](Document/Document/content/4.3_Appendix_C.md)
+- 4.4 [付録 D: AI アーキテクチャコンポーネントへの脅威の列挙 (Appendix D: Threat Enumeration to AI Architecture Components)](Document/Document/content/4.4_Appendix_D.md)
+- 4.5 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](Document/Document/content/4.5_Appendix_E.md)
+- 4.6 [付録 F: ドメイン固有テスト (Appendix F: Domain Specific Testing)](Document/Document/content/4.0_Domain_Specific_Testing.md)
+- 4.7 [参考情報 (References)](Document/Document/content/References.md)
 
 ## Translator (Japanese)
 
