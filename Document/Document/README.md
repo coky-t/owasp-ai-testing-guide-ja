@@ -81,4 +81,4 @@
 
 - 4.6 [付録 F: ドメイン固有テスト (Appendix F: Domain Specific Testing)](content/4.0_Domain_Specific_Testing.md)
 
-- 4.7 [参考情報 (References)](content/References.md)
+- 4.7 [参考情報 (References)](content/4.7_References.md)

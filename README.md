@@ -84,7 +84,7 @@ This is the unofficial Japanese translation of the [OWASP AI Testing Guide](http
 - 4.4 [付録 D: AI アーキテクチャコンポーネントへの脅威の列挙 (Appendix D: Threat Enumeration to AI Architecture Components)](Document/Document/content/4.4_Appendix_D.md)
 - 4.5 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](Document/Document/content/4.5_Appendix_E.md)
 - 4.6 [付録 F: ドメイン固有テスト (Appendix F: Domain Specific Testing)](Document/Document/content/4.0_Domain_Specific_Testing.md)
-- 4.7 [参考情報 (References)](Document/Document/content/References.md)
+- 4.7 [参考情報 (References)](Document/Document/content/4.7_References.md)
 
 ## Translator (Japanese)
 
