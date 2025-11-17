@@ -1,5 +1,5 @@
 
-## AITG-DAT-02 – ランタイム流出のテスト (Testing for Runtime Exfiltration
+# AITG-DAT-02 – ランタイム流出のテスト (Testing for Runtime Exfiltration
 
 ### 概要
 
