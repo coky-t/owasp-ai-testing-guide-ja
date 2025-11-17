@@ -1,5 +1,5 @@
 
-## AITG-MOD-06 – 新しいデータに対する頑健性のテスト (Testing for Robustness to New Data)
+# AITG-MOD-06 – 新しいデータに対する頑健性のテスト (Testing for Robustness to New Data)
 
 ### 概要
 This test identifies vulnerabilities associated with the lack of robustness to new or out-of-distribution (OOD) data. Robustness issues occur when AI models exhibit significant performance degradation or unpredictable behaviors upon encountering data distributions different from those seen during training, potentially impacting reliability, trustworthiness, and safety.
@@ -40,5 +40,5 @@ This test identifies vulnerabilities associated with the lack of robustness to n
 
 ### 参考情報
 - "Failing Loudly: An Empirical Study of Methods for Detecting Dataset Shift." Rabanser, Stephan, et al. NeurIPS 2019. [Link](https://arxiv.org/abs/1810.11953)
-- OWASP Top 10 for LLM Applications 2025. "LLM05: Improper Output Handling." OWASP, 2025. [Link](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025. "LLM05: Improper Output Handling." OWASP, 2025. [Link](https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/)
 - NIST AI 100-2e2025, "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations," Section 4.2 "Evaluation – Robustness and Resilience to Distribution Shifts." NIST, March 2025. [Link](https://doi.org/10.6028/NIST.AI.100-2e2025)
