@@ -1,5 +1,5 @@
 
-## AITG-INF-05 - ファインチューニングポイズニングのテスト (Testing for Fine-tuning Poisoning)
+# AITG-INF-05 - ファインチューニングポイズニングのテスト (Testing for Fine-tuning Poisoning)
 
 ### 概要
 This test identifies vulnerabilities arising from poisoning during fine-tuning, a targeted manipulation of datasets or parameters during the fine-tuning process of pre-trained AI models. Attackers exploit fine-tuning to introduce subtle biases, persistent backdoors, or harmful behaviors, significantly compromising model trust, security, and compliance.
@@ -30,7 +30,7 @@ This test identifies vulnerabilities arising from poisoning during fine-tuning, 
 - **Activation-Based Monitoring and Pruning**: After fine-tuning, analyze the model's internal activations. Poisoned backdoors often create highly specific and unusual activation patterns. These can be detected and the corresponding neurons can be pruned to neutralize the backdoor.
 - **Regular Red Teaming and Auditing**: Periodically conduct red teaming exercises where a dedicated team actively tries to poison the fine-tuning process. This helps uncover vulnerabilities in the MLOps pipeline before they can be exploited by real attackers.
 
-### この特定のテストに推奨されるツール
+### 推奨されるツール
 - **Adversarial Robustness Toolbox (ART)**
   - Provides extensive tools for crafting poisoning attacks and implementing defenses, including data sanitization and activation-based detection.
   - Tool Link: [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
@@ -42,7 +42,7 @@ This test identifies vulnerabilities arising from poisoning during fine-tuning, 
   - Tool Link: [Cleanlab on GitHub](https://github.com/cleanlab/cleanlab)
 
 ### 参考情報
-- OWASP Top 10 for LLM Applications 2025. "LLM04: Data and Model Poisoning." OWASP, 2025. [Link](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025. "LLM04: Data and Model Poisoning." OWASP, 2025. [Link](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/)
 - NIST AI 100-2e2025, "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations," Section 2.3 "Poisoning Attacks and Mitigations." NIST, March 2025. [Link](https://doi.org/10.6028/NIST.AI.100-2e2025)
 - Wallace, Eric, et al. "Universal Adversarial Triggers for Attacking and Analyzing NLP." EMNLP-IJCNLP 2019. [Link](https://arxiv.org/abs/1908.07125)
 - BadLlama: "Tailoring Backdoor Attacks to Large Language Models." [Link](https://arxiv.org/abs/2401.06333)
