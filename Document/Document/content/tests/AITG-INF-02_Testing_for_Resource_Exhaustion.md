@@ -1,5 +1,5 @@
 
-## AITG-INF-02 – リソース枯渇のテスト (Testing for Resource Exhaustion)
+# AITG-INF-02 – リソース枯渇のテスト (Testing for Resource Exhaustion)
 
 ### 概要
 
@@ -53,7 +53,7 @@ The AI infrastructure should effectively:
 - **Monitor Infrastructure and Costs Continuously**: Use monitoring tools (e.g., Prometheus, Grafana, Datadog) to track resource consumption and API response times. Set up automated alerts for unusual spikes.
 - **Implement Spending Thresholds**: For all third-party AI services, configure hard spending limits and billing alerts in the provider's console. Treat this as a critical security control.
 
-### この特定のテストに推奨されるツール
+### 推奨されるツール
 
 - **Stress Testing & Load Generation:** [Locust](https://locust.io/), [Apache JMeter](https://jmeter.apache.org/), [k6](https://k6.io/)
 - **Monitoring & Alerting:** [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/), [Datadog](https://www.datadoghq.com/)
@@ -61,6 +61,6 @@ The AI infrastructure should effectively:
 
 ### 参考情報
 
-- OWASP Top 10 for LLM Applications 2025 – [Unbounded Resource Consumption](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025 – [Unbounded Resource Consumption](https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption)
 - OWASP Testing Guide – [Denial of Service Testing](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Denial_of_Service_Testing/)
 - NIST – [Security Guidelines for AI Systems](https://doi.org/10.6028/NIST.AI.100-2e2025)
