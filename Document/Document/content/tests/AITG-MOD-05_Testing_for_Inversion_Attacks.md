@@ -1,5 +1,5 @@
 
-## AITG-MOD-05 – 反転攻撃のテスト (Testing for Inversion Threats)
+# AITG-MOD-05 – 反転攻撃のテスト (Testing for Inversion Threats)
 
 ### 概要
 This test identifies vulnerabilities associated with model inversion attacks, where adversaries reconstruct sensitive training data or attributes from model outputs. Model inversion exploits the outputs, confidence scores, gradients, or intermediate layers of a model, potentially compromising personal, financial, or medical information, and violating data privacy regulations.
