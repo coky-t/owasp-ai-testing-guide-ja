@@ -1,5 +1,5 @@
 
-## AITG-DAT-01 – トレーニングデータ露出のテスト (Testing for Training Data Exposure)
+# AITG-DAT-01 – トレーニングデータ露出のテスト (Testing for Training Data Exposure)
 
 ### 概要
 
