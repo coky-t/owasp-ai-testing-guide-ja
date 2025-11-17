@@ -1,5 +1,5 @@
 
-## AITG-INF-03 – プラグイン境界違反のテスト (Testing for Plugin Boundary Violations)
+# AITG-INF-03 – プラグイン境界違反のテスト (Testing for Plugin Boundary Violations)
 
 ### 概要
 
@@ -10,8 +10,6 @@ Plugin Boundary Violations occur when AI systems utilizing plugins, integrations
 - Identify and verify the security boundaries between plugins and core AI components.
 - Detect unauthorized access or privilege escalation due to misconfigured or vulnerable plugins.
 - Ensure robust isolation and least-privilege enforcement among third-party services integrated with the AI model.
-
-
 
 ### テスト/ペイロード
 
@@ -46,7 +44,7 @@ The AI infrastructure and plugins should effectively:
 - **Require Explicit Confirmation for Dangerous Operations**: For any plugin that can modify data or state (e.g., deleting, creating, updating), the AI agent must ask the user for explicit confirmation before executing the action. Do not rely on the LLM to infer consent.
 - **Comprehensive Logging and Monitoring**: Log every plugin call, its parameters, and the user context. Monitor these logs for suspicious patterns, such as a single user rapidly calling multiple different plugins or unexpected sequences of plugin calls.
 
-### この特定のテストに推奨されるツール
+### 推奨されるツール
 
 - **Access Control and Authorization:** [Open Policy Agent (OPA)](https://www.openpolicyagent.org/), [Keycloak](https://www.keycloak.org/)
 - **Container and Plugin Isolation:** [gVisor](https://gvisor.dev/), [Firecracker](https://firecracker-microvm.github.io/), [Kubernetes Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
@@ -55,7 +53,7 @@ The AI infrastructure and plugins should effectively:
 
 ### 参考情報
 
-- OWASP Top 10 for LLM Applications 2025 – [Excessive Agency and Plugin Misuse](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025 – [Excessive Agency and Plugin Misuse](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)
 - MITRE ATT&CK – [Exploitation for Privilege Escalation](https://attack.mitre.org/tactics/TA0004/)
 - NIST – [Guidelines on AI and System Boundary Security](https://doi.org/10.6028/NIST.AI.100-2e2025)
-- "The Dangers of LLM Plugins: A Security Analysis of the OpenAI Plugin Ecosystem." Trail of Bits Blog, 2023. [Link](https://blog.trailofbits.com/2023/05/16/the-dangers-of-llm-plugins-a-security-analysis-of-the-openai-plugin-ecosystem/)
+- The Dangers of LLM Plugins: A Security Analysis of the OpenAI Plugin Ecosystem - Trail of Bits Blog, 2023 - [Link](https://blog.trailofbits.com/2023/05/16/the-dangers-of-llm-plugins-a-security-analysis-of-the-openai-plugin-ecosystem/)
