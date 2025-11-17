@@ -1,5 +1,5 @@
 
-## AITG-INF-01 – サプライチェーン改竄のテスト (Testing for Supply Chain Tampering)
+# AITG-INF-01 – サプライチェーン改竄のテスト (Testing for Supply Chain Tampering)
 
 ### 概要
 
@@ -51,10 +51,7 @@ The AI infrastructure should effectively:
 
 ### 参考情報
 
-- OWASP Top 10 for LLM Applications 2025 – [Supply Chain Security](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025 – [Supply Chain Security](https://genai.owasp.org/llmrisk/llm03-supply-chain/)
 - NIST Guidelines on AI Security – [NIST AI 100-2e2025](https://doi.org/10.6028/NIST.AI.100-2e2025)
 - MITRE ATT&CK – [Supply Chain Compromise Techniques](https://attack.mitre.org/techniques/T1195/)
 - The Linux Foundation. "Software Bill of Materials (SBOM)". [Link](https://www.linuxfoundation.org/tools/the-software-bill-of-materials-is-a-critical-tool-for-supply-chain-management/)
-
-
-This detailed and structured entry aligns with your existing framework and testing documentation, clearly identifying vulnerabilities, expected behaviors, remediation strategies, and specific tooling to address supply chain tampering. Let me know if any further refinements are needed!
