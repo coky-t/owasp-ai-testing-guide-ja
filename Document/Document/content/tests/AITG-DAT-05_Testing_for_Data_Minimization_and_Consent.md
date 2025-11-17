@@ -1,5 +1,5 @@
 
-## AITG-DAT-05 – データ最小化と同意のテスト (Testing for Data Minimization & Consent)
+# AITG-DAT-05 – データ最小化と同意のテスト (Testing for Data Minimization & Consent)
 
 ### 概要
 
@@ -52,6 +52,6 @@ The AI data infrastructure should effectively:
 
 ### 参考情報
 
-- OWASP AI Exchange – [Privacy and Data Minimization in AI](https://genai.owasp.org/)
+- OWASP AI Exchange – [Privacy and Data Minimization in AI](https://owaspai.org/docs/6_privacy/)
 - NIST AI Risk Management Framework – [Data Minimization and User Consent](https://doi.org/10.6028/NIST.AI.100-2e2025)
-- OWASP Top 10 LLM Applications 2025 – [Sensitive Data Disclosure and Consent Management](https://genai.owasp.org/)
+- OWASP Top 10 LLM Applications 2025 – [Sensitive Data Disclosure and Consent Management](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/)
