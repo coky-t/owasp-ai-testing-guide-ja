@@ -1,5 +1,5 @@
 
-## AITG-INF-04 – ケイパビリティ不正使用のテスト (Testing for Capability Misuse)
+# AITG-INF-04 – ケイパビリティ不正使用のテスト (Testing for Capability Misuse)
 
 ### 概要
 
@@ -44,7 +44,7 @@ The AI infrastructure should effectively:
 - **Principle of Least Privilege**: Always assign users and AI agents the minimum set of capabilities required for their legitimate tasks. Avoid granting broad permissions.
 - **Continuous Monitoring and Alerting**: Monitor the logs of capability invocations for suspicious activity, such as a single user attempting many different unauthorized actions, and trigger alerts for immediate review.
 
-### この特定のテストに推奨されるツール
+### 推奨されるツール
 
 - **Authorization and Policy Enforcement:** [Open Policy Agent (OPA)](https://www.openpolicyagent.org/), [Kyverno](https://kyverno.io/), [Casbin](https://casbin.org/)
 - **Security and Ethical Controls (Guardrails):** [NVIDIA NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails), [LangChain Guardrails](https://python.langchain.com/docs/guides/guardrails)
@@ -52,7 +52,7 @@ The AI infrastructure should effectively:
 
 ### 参考情報
 
-- OWASP Top 10 for LLM Applications 2025 – [Excessive Agency and Capability Misuse](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025 – [Excessive Agency and Capability Misuse](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/)
 - NIST AI Risk Management Framework – [AI Capability Management and Responsible Use](https://doi.org/10.6028/NIST.AI.100-2e2025)
 - MITRE ATT&CK – [Abuse of Legitimate Functionality](https://attack.mitre.org/techniques/T1071/)
 - Open Policy Agent (OPA) Documentation. [Link](https://www.openpolicyagent.org/docs/latest/)
