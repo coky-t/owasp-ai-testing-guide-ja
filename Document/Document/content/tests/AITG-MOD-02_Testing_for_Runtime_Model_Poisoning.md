@@ -1,5 +1,5 @@
 
-## AITG-MOD-02 - ランタイムモデルポイズニングのテスト (Testing for Runtime Model Poisoning)
+# AITG-MOD-02 - ランタイムモデルポイズニングのテスト (Testing for Runtime Model Poisoning)
 
 ### 概要
 This test identifies vulnerabilities associated with runtime model poisoning, where adversaries intentionally manipulate inputs during model inference to gradually degrade or alter model behavior. Runtime poisoning can subtly inject bias, degrade accuracy, and introduce persistent backdoors, compromising system integrity over time.
@@ -38,6 +38,6 @@ This test identifies vulnerabilities associated with runtime model poisoning, wh
   - Tool Link: [River on GitHub](https://github.com/online-ml/river)
 
 ### 参考情報
-- OWASP Top 10 for LLM Applications 2025. "LLM04: Data and Model Poisoning." OWASP, 2025. [Link](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025. "LLM04: Data and Model Poisoning." OWASP, 2025. [Link](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/)
 - NIST AI 100-2e2025, "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations," Section 2.3 "Poisoning Attacks and Mitigations." NIST, March 2025. [Link](https://doi.org/10.6028/NIST.AI.100-2e2025)
 - "Poisoning Attacks on Machine Learning." A. N. Jagielski, et al. [Link](https://arxiv.org/abs/1804.00792)
