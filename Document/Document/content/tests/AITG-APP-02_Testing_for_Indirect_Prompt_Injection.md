@@ -1,4 +1,4 @@
-## AITG-APP-02 - 間接プロンプトインジェクションのテスト (Testing for Indirect Prompt Injection)
+# AITG-APP-02 - 間接プロンプトインジェクションのテスト (Testing for Indirect Prompt Injection)
 
 ### 概要
 Indirect prompt injection occurs when external, untrusted content that is processed by a large language model (LLM) contains hidden instructions or manipulative prompts. These embedded payloads may unintentionally alter the model’s behavior, bypassing security measures, accessing sensitive data, or executing unauthorized actions. Unlike direct prompt injections, indirect injections originate from external content that an AI model ingests as part of its regular operation, posing significant security risks.
@@ -19,8 +19,10 @@ Technically verify whether an LLM or AI application can be indirectly manipulate
 The following is a diagram that represents this kind of test:
 
 <p align="center">
-  <img src="../../images/IndirectPromptInjection.png" alt="Description" width="800"/>
+  <img src="../../images/IndirectPromptInjection.png" alt="Description" width="600"/>
 </p>
+
+*Fig. 5 A schema of indirect prompt injection technique*
 
 For this kind of test you need to craft a web page with the malicious payload that will be executed in the user prompt and observe if the AI system will execute your payload.
 
@@ -102,18 +104,9 @@ A vulnerability is confirmed if the AI model:
 - Executes unauthorized or potentially harmful actions encoded within external inputs.
 
 ### 実例
-- **Title**: Indirect Prompt Injection: Generative AI’s Greatest Security Flaw
-- **Author**: CETaS, Turing Institute
-- **URL**: [https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw](https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw)
-
-- **Title**: Indirect Prompt Injection in the Wild
-- **Author**: Kaspersky
-- **URL**: [https://securelist.com/indirect-prompt-injection-in-the-wild/113295/](https://securelist.com/indirect-prompt-injection-in-the-wild/113295/)
-
-- **Title**: EchoLeak: Zero-Click AI Vulnerability Enabling Data Exfiltration from Microsoft 365 Copilot
-- **Author**: Aim Security Labs
-- **CVE**: CVE-2025-32711
-- **URL**: [https://www.aim.security/lp/aim-labs-echoleak-blogpost](https://www.aim.security/lp/aim-labs-echoleak-blogpost)
+- Indirect Prompt Injection: Generative AI’s Greatest Security Flaw - CETaS, Turing Institute - [https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw](https://cetas.turing.ac.uk/publications/indirect-prompt-injection-generative-ais-greatest-security-flaw)
+- Indirect Prompt Injection in the Wild - Kaspersky - [https://securelist.com/indirect-prompt-injection-in-the-wild/113295/](https://securelist.com/indirect-prompt-injection-in-the-wild/113295/)
+- EchoLeak: Zero-Click AI Vulnerability Enabling Data Exfiltration from Microsoft 365 Copilot - Aim Security Labs - [https://www.aim.security/lp/aim-labs-echoleak-blogpost](https://www.aim.security/lp/aim-labs-echoleak-blogpost)
 
 ### 対策
 - Apply comprehensive content validation and sanitization protocols for all external inputs.
@@ -128,18 +121,8 @@ A vulnerability is confirmed if the AI model:
   - **URL**: [https://promptfoo.dev](https://promptfoo.dev)
 
 ### 参考情報
-- **Title**: OWASP Top 10 LLM01:2025 Prompt Injection
-  - **Author**: OWASP Foundation
-  - **Link**: [https://genai.owasp.org](https://genai.owasp.org)
-- **Title**: NIST AI 100-2e2025 - Indirect Prompt Injection Attacks and Mitigations
-  - **Author**: NIST
-  - **Link**: [https://doi.org/10.6028/NIST.AI.100-2e2025](https://doi.org/10.6028/NIST.AI.100-2e2025)
-- **Title**: Prompt Injection Attack against LLM-integrated Applications
-  - **Author**: Johann Rehberger
-  - **URL**: [https://arxiv.org/abs/2306.05499](https://arxiv.org/abs/2306.05499)
-- **Title**: MCP Security Notification: Tool Poisoning Attacks
-  - **Authors**: Luca Beurer-Kellner, Marc Fischer
-  - **URL**: [https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
-- **Title**: Beyond the Protocol: Unveiling Attack Vectors in the Model Context Protocol (MCP) Ecosystem
-  - **Authors**: Hao Song, Yiming Shen, Wenxuan Luo, Leixin Guo, Ting Chen, Jiashui Wang, Beibei Li, Xiaosong Zhang, Jiachi Chen
-  - **URL**: [https://arxiv.org/pdf/2506.02040](https://arxiv.org/pdf/2506.02040)
+- OWASP Top 10 LLM01:2025 Prompt Injection - [https://genai.owasp.org](https://genai.owasp.org/llmrisk/llm01-prompt-injection)
+- NIST AI 100-2e2025 - Indirect Prompt Injection Attacks and Mitigations -[https://doi.org/10.6028/NIST.AI.100-2e2025](https://doi.org/10.6028/NIST.AI.100-2e2025)
+- Prompt Injection Attack against LLM-integrated Applications, Johann Rehberger - [https://arxiv.org/abs/2306.05499](https://arxiv.org/abs/2306.05499)
+- MCP Security Notification: Tool Poisoning Attacks - Luca Beurer-Kellner, Marc Fischer [https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
+- Beyond the Protocol: Unveiling Attack Vectors in the Model Context Protocol (MCP) Ecosystem - [https://arxiv.org/pdf/2506.02040](https://arxiv.org/pdf/2506.02040)
