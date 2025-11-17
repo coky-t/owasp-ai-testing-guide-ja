@@ -1,5 +1,5 @@
 
-## AITG-MOD-03 - 汚染されたトレーニングセットのテスト (Testing for Poisoned Training Sets)
+# AITG-MOD-03 - 汚染されたトレーニングセットのテスト (Testing for Poisoned Training Sets)
 
 ### 概要
 This test identifies vulnerabilities associated with poisoned training datasets, where adversaries deliberately inject or alter training data to compromise AI model integrity during the training phase. Data poisoning can embed biases, create persistent backdoors, or degrade overall model accuracy and reliability, significantly impacting operational trust and compliance.
@@ -42,5 +42,5 @@ This test identifies vulnerabilities associated with poisoned training datasets,
 
 ### 参考情報
 - Northcutt, Curtis, et al. "Confident Learning: Estimating Uncertainty in Dataset Labels." Journal of Artificial Intelligence Research, 2021. [Link](https://arxiv.org/abs/1911.00068)
-- OWASP Top 10 for LLM Applications 2025. "LLM04: Data and Model Poisoning." OWASP, 2025. [Link](https://genai.owasp.org/)
+- OWASP Top 10 for LLM Applications 2025. "LLM04: Data and Model Poisoning." OWASP, 2025. [Link](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/)
 - NIST AI 100-2e2025, "Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations," Section 2.3 "Poisoning Attacks and Mitigations." NIST, March 2025. [Link](https://doi.org/10.6028/NIST.AI.100-2e2025)
