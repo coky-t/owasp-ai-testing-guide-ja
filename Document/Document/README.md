@@ -77,6 +77,6 @@
 
 - 4.5 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](content/4.5_Appendix_E.md)
 
-- 4.6 [付録 F: ドメイン固有テスト (Appendix F: Domain Specific Testing)](content/4.0_Domain_Specific_Testing.md)
+- 4.6 [付録 F: ドメイン固有テスト (Appendix F: Domain Specific Testing)](content/4.6_Appendix_F_Domain_Specific_Testing.md)
 
 - 4.7 [参考情報 (References)](content/4.7_References.md)
