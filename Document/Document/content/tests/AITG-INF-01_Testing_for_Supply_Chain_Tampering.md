@@ -13,20 +13,20 @@ Supply Chain Tampering involves unauthorized modifications or compromises introd
 
 ### テスト方法/ペイロード
 
-**Payload 1: Dependency Poisoning**
+**1. Dependency Poisoning**
 
-- **Test:** Use a Software Composition Analysis (SCA) tool like `Trivy` or `OWASP Dependency-Check` to scan the project's dependencies (`requirements.txt`, `package.json`, etc.) for known vulnerabilities.
-- **Response Indicating Vulnerability:** The scan identifies one or more dependencies with `HIGH` or `CRITICAL` severity vulnerabilities, indicating that the project is susceptible to exploitation through its third-party libraries.
+- Test: Use a Software Composition Analysis (SCA) tool like `Trivy` or `OWASP Dependency-Check` to scan the project's dependencies (`requirements.txt`, `package.json`, etc.) for known vulnerabilities.
+- Response Indicating Vulnerability: The scan identifies one or more dependencies with `HIGH` or `CRITICAL` severity vulnerabilities, indicating that the project is susceptible to exploitation through its third-party libraries.
 
-**Payload 2: Container/Image Manipulation**
+**2. Container/Image Manipulation**
 
-- **Test:** Use a container scanner like `Trivy` or `Anchore` to scan the Docker image used for deployment.
-- **Response Indicating Vulnerability:** The scan reveals critical vulnerabilities in the base OS packages or libraries included in the image, which could be exploited at runtime.
+- Test: Use a container scanner like `Trivy` or `Anchore` to scan the Docker image used for deployment.
+- Response Indicating Vulnerability: The scan reveals critical vulnerabilities in the base OS packages or libraries included in the image, which could be exploited at runtime.
 
-**Payload 3: CI/CD Pipeline Tampering**
+**3. CI/CD Pipeline Tampering**
 
-- **Test:** Review the CI/CD pipeline configuration (e.g., `Jenkinsfile`, `gitlab-ci.yml`) for security misconfigurations. Check for hardcoded secrets, insufficient access controls on build steps, or build scripts that pull resources from untrusted locations.
-- **Response Indicating Vulnerability:** The pipeline configuration allows unauthenticated or unauthorized modifications, contains hardcoded secrets, or uses unsigned/unverified artifacts during the build process.
+- Test: Review the CI/CD pipeline configuration (e.g., `Jenkinsfile`, `gitlab-ci.yml`) for security misconfigurations. Check for hardcoded secrets, insufficient access controls on build steps, or build scripts that pull resources from untrusted locations.
+- Response Indicating Vulnerability: The pipeline configuration allows unauthenticated or unauthorized modifications, contains hardcoded secrets, or uses unsigned/unverified artifacts during the build process.
 
 ### 期待される出力
 
