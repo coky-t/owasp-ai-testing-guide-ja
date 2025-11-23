@@ -77,10 +77,8 @@ AI-generated outputs must:
 - Zero-shot/Few-shot examples and/or unbiasing post-processing.
 - Regularly audit AI models using structured adversarial testing frameworks.
 
-### この特定のテストに推奨されるツール
-- **Garak (Continuation.py)**
-  - Garak provides structured adversarial probes specifically designed to test for bias and harmful content vulnerabilities within large language models.
-  - Tool Link: [Garak - continuation probe](https://github.com/NVIDIA/garak/blob/main/garak/probes/continuation.py)
+### 推奨されるツール
+- **Garak (Continuation.py)**: Garak provides structured adversarial probes specifically designed to test for bias and harmful content vulnerabilities within large language models - [Garak - continuation probe](https://github.com/NVIDIA/garak/blob/main/garak/probes/continuation.py)
 
 ### 参考情報
 - OWASP Top 10 for LLM Applications 2025. "LLM00:2025 Misinformation." OWASP, 2025. [Link](https://genai.owasp.org/llmrisk/llm092025-misinformation/)
