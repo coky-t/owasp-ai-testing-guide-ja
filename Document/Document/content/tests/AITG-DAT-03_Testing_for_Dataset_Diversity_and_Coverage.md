@@ -51,6 +51,6 @@ The AI dataset should effectively:
 ### 参考情報
 
 - AI Fairness 360 - IBM - [Link](https://research.ibm.com/blog/ai-fairness-360)
-- Fairlearn. (n.d.). *Fairlearn*.  [Link](https://fairlearn.org)
-- TensorFlow Data Validation*.  [Link](https://www.tensorflow.org/tfx/data_validation/get_started)
--  Pandas Profiling - [Link](https://pandas-profiling.github.io/pandas-profiling)
+- Fairlearn - [Link](https://fairlearn.org)
+- TensorFlow Data Validation - [Link](https://www.tensorflow.org/tfx/data_validation/get_started)
+- Pandas Profiling - [Link](https://pandas-profiling.github.io/pandas-profiling)
