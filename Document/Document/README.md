@@ -65,7 +65,7 @@
 - 3.4.4 | AITG-DAT-04   | [データ内の有害なコンテンツのテスト (Testing for Harmful Content in Data)](content/tests/AITG-DAT-04_Testing_for_Harmful_Content_in_Data.md) |
 - 3.4.5 | AITG-DAT-05   | [データ最小化と同意のテスト (Testing for Data Minimization & Consent)](content/tests/AITG-DAT-05_Testing_for_Data_Minimization_and_Consent.md) |
 
-## 4. [付録と参考情報 (Appendixes and References)](content/4.0_Appendix_and_References.md)
+## 4. [付録と参考情報 (Appendices and References)](content/4.0_Appendices_and_References.md)
 
 - 4.1 [付録 A: SAIF (Secure AI Framework) を使用する理由 (Appendix A: Rationale For Using SAIF (Secure AI Framework))](content/4.1_Appendix_A.md)
 
