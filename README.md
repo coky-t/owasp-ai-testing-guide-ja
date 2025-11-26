@@ -85,6 +85,10 @@ This is the unofficial Japanese translation of the [OWASP AI Testing Guide](http
 - 4.5 [付録 E: AI システムの脆弱性 (CVE および CWE) に対する AI 脅威のマッピング (Appendix E: Mapping AI Threats Against AI Systems Vulnerabilities (CVEs & CWEs))](Document/Document/content/4.5_Appendix_E.md)
 - 4.6 [参考情報 (References)](Document/Document/content/4.6_References.md)
 
+## License
+
+[Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+
 ## Translator (Japanese)
 
 [Koki Takeyama](https://github.com/coky-t)
