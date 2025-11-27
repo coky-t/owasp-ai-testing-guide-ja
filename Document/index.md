@@ -20,7 +20,7 @@ pitch: AI システム評価を実行するための方法論
 **OWASP AI テストガイド v1** が正式にリリースされました。  
 このマイルストーンは、AI システムの信頼性テストについての初めてのコミュニティ駆動のオープンな標準となります。
 
-👉 **[PDF (英語版)](https://github.com/OWASP/www-project-ai-testing-guide/blob/d641514cbd73a0a197ea4f814ddb198285a19447/PDFGenerator/V1.0/OWASP-AI-Testing-Guide-v1.pdf) をダウンロード**
+👉 **[PDF (英語版)](https://github.com/OWASP/www-project-ai-testing-guide/blob/5c6d357e2290e8c81ab7e6673950e978e1b83604/PDFGenerator/V1.0/OWASP-AI-Testing-Guide-v1.pdf) をダウンロード**
 
 
 👉 **[GitHub (英語版)](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/README.md) で閲覧**
