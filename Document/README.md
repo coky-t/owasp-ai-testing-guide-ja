@@ -7,7 +7,7 @@ OWASP AI テストガイドプロジェクトは、人工知能システムを�
 AI システムが重要なアプリケーションにますます不可欠になるにつれ、その信頼性、セキュリティ、倫理的整合性を確保することが最重要になります。AI システムのテストは、従来のソフトウェアテストとは大きく異なる独自の課題を伴い、専門的なアプローチと方法論が必要になります。
 
 <div align="center">
-  <img src="assets/images/OWASP_AI_Testing_Guide.png" alt="Alt text" width="300">
+  <img src="assets/images/OWASP_AI_Testing_Guide.png" alt="OWASP AI Testing Guide" width="300">
 </div>
 
 ## 既存のリソースとイニシアチブ
