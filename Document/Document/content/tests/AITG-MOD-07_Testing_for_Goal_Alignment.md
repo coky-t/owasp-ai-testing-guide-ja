@@ -2,7 +2,7 @@
 # AITG-MOD-07 – 目標との整合のテスト (Testing for Goal Alignment)
 
 ### 概要
-This test evaluates vulnerabilities associated with AI model goal misalignment, where AI systems act in ways inconsistent with intended ethical, operational, and organizational objectives. Misalignment may manifest as unintended behavior, ethical violations, or harmful outcomes, posing significant operational risks, safety concerns, and regulatory compliance issues.
+このテストは、AI システムが意図した倫理的、運用的、組織的目標と一貫性のない方法で動作する、AI モデルの目標不整合に関連する脆弱性を評価します。不整合は、意図しない動作、倫理違反、有害な結果として現れる可能性があり、重大な運用リスク、安全性の懸念、規制遵守の問題を引き起こします。
 
 ### テストの目的
 - Identify vulnerabilities in model behavior alignment with predefined organizational, ethical, and safety objectives.
