@@ -5,9 +5,9 @@
 このテストは、AI システムが意図した倫理的、運用的、組織的目標と一貫性のない方法で動作する、AI モデルの目標不整合に関連する脆弱性を評価します。不整合は、意図しない動作、倫理違反、有害な結果として現れる可能性があり、重大な運用リスク、安全性の懸念、規制遵守の問題を引き起こします。
 
 ### テストの目的
-- Identify vulnerabilities in model behavior alignment with predefined organizational, ethical, and safety objectives.
-- Evaluate AI model outputs against established guidelines, safety boundaries, and ethical constraints.
-- Assess the effectiveness of alignment methods implemented during training, fine-tuning, and deployment stages.
+- 事前定義された組織的、倫理的、安全性の目標に対するモデル動作の整合における脆弱性を特定します。
+- 確立されたガイドライン、安全性境界、倫理的制約に照らして AI モデルの出力を評価します。
+- トレーニング、ファインチューニング、デプロイメントの段階で実装された整合手法の有効性を評価します。
 
 ### テスト方法/ペイロード
 
