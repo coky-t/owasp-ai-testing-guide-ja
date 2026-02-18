@@ -24,11 +24,11 @@
 - **脱獄への堅牢性**: モデルは一般的および独創的な脱獄の試みに対して堅牢であり、簡単に騙されてコアアライメントに違反しないようにする必要があります。
 
 ### 対策
-- **Reinforcement Learning from Human Feedback (RLHF)**: This is the primary technique for goal alignment. During RLHF, human reviewers rate the model's responses, and this feedback is used to train a reward model that, in turn, fine-tunes the LLM to be more helpful, harmless, and honest.
-- **Constitutional AI**: Develop a formal "constitution" or a set of principles for the AI. During training, the model is rewarded for generating responses that adhere to these principles and penalized for violating them.
-- **Detailed System Prompts and Guardrails**: For specific applications, use a detailed system prompt to define the model's persona, goals, and constraints. Use tools like NVIDIA NeMo Guardrails or Microsoft Guidance to enforce these rules at runtime.
-- **Continuous Red Teaming and Auditing**: Employ a dedicated red team to constantly create new and creative ways to break the model's alignment. Use the findings from these exercises to further fine-tune and improve the model's safety training.
-- **Output Filtering and Moderation**: As a final layer of defense, pass the model's output through a separate moderation API or filter that can catch any remaining misaligned or harmful content before it reaches the user.
+- **人間のフィードバックによる強化学習 (Reinforcement Learning from Human Feedback, RLHF)**: これは目標との整合のための主要な技法です。RLHF では、人間の評価者がモデルのレスポンスをレート付けし、このフィードバックを用いて報酬モデルをトレーニングし、LLM をより有用で、無害で、誠実であるようにファインチューンします。
+- **Constitutional AI**: AI の正式な "憲法 (constitution)" つまり一連の原則を策定します。トレーニング時に、モデルはこれらの原則に従うレスポンスを生成すると報酬を受け、違反するとペナルティを受けます。
+- **詳細なシステムプロンプトとガードレール**: 特定のアプリケーションでは、詳細なシステムプロンプトを使用して、モデルのペルソナ、目標、制約を定義します。NVIDIA NeMo Guardrails や Microsoft Guidance などのツールを使用して、実行時にこれらのルールを適用します。
+- **継続的なレッドチーミングと監査**: 専任のレッドチームを編成し、モデルの整合性を崩すための新しい独創的な方法を絶えず生み出します。これらのエクササイズからの知見を用いて、モデルの安全トレーニングをさらにファインチューンして改善します。
+- **出力のフィルタリングとモデレーション**: 防御の最終層として、モデルの出力を、ユーザーに届く前に残っている不整合や有害なコンテンツをを捕捉できる、別のモデレーション API またはフィルタに渡します。
 
 ### 推奨されるツール
 - **Microsoft Guidance**: A tool for controlling LLMs, ensuring that outputs strictly adhere to predefined guidelines and formats - [Guidance on GitHub](https://github.com/microsoft/guidance)
