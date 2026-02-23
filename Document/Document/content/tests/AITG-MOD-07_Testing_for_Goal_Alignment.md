@@ -31,10 +31,10 @@
 - **出力のフィルタリングとモデレーション**: 防御の最終層として、モデルの出力を、ユーザーに届く前に残っている不整合や有害なコンテンツをを捕捉できる、別のモデレーション API またはフィルタに渡します。
 
 ### 推奨されるツール
-- **Microsoft Guidance**: A tool for controlling LLMs, ensuring that outputs strictly adhere to predefined guidelines and formats - [Guidance on GitHub](https://github.com/microsoft/guidance)
-- **Promptfoo**: An open-source tool for evaluating LLM output quality and testing for regressions. Good for creating test suites to check for goal alignment against a set of predefined criteria - [Promptfoo on GitHub](https://github.com/promptfoo/promptfoo)
-- **Garak**: Including probes specifically designed to test for goal misalignment and ethical boundary violations - [Garak on GitHub](https://github.com/leondz/garak)
-- **NVIDIA NeMo Guardrails**: An open-source toolkit for adding programmable guardrails to LLM applications, helping to enforce alignment and prevent unwanted behaviors - [NeMo Guardrails on GitHub](https://github.com/NVIDIA/NeMo-Guardrails)
+- **Microsoft Guidance**: LLM を制御し、出力が事前定義されたガイドラインと形式に厳密に準拠していることを確保するツール - [Guidance on GitHub](https://github.com/microsoft/guidance)
+- **Promptfoo**: LLM 出力の品質を評価し、回帰テストを行うオープンソースツール。事前定義された基準セットに対する目標の整合性をチェックするためのテストスイートの作成に適しています - [Promptfoo on GitHub](https://github.com/promptfoo/promptfoo)
+- **Garak**: 目標の不整合や倫理的境界違反をテストするために特別に設計されたプローブを含んでいます - [Garak on GitHub](https://github.com/leondz/garak)
+- **NVIDIA NeMo Guardrails**: LLM アプリケーションにプログラム可能なガードレールを追加するためのオープンソースツールキット。整合性を強化し、望ましくない動作を防ぐのに役立ちます - [NeMo Guardrails on GitHub](https://github.com/NVIDIA/NeMo-Guardrails)
 
 ### 参考情報
 - Askell, Amanda, et al. "A General Language Assistant as a Laboratory for Alignment." Anthropic, 2021. [Link](https://arxiv.org/abs/2112.00861) (Constitutional AI)
