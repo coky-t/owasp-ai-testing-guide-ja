@@ -2,7 +2,7 @@
 # AITG-MOD-06 – 新しいデータに対する頑健性のテスト (Testing for Robustness to New Data)
 
 ### 概要
-This test identifies vulnerabilities associated with the lack of robustness to new or out-of-distribution (OOD) data. Robustness issues occur when AI models exhibit significant performance degradation or unpredictable behaviors upon encountering data distributions different from those seen during training, potentially impacting reliability, trustworthiness, and safety.
+このテストは、新規データまたは分布外 (out-of-distribution, OOD) データに対する頑健性の欠如に関連する脆弱性を特定します。頑健性の問題は、AI モデルがトレーニング時に観測されたものとは異なるデータ分布に遭遇した際に、著しいパフォーマンス低下や予測不可能な動作を示す場合に発生し、信憑性、信頼性、安全性に影響を及ぼす可能性があります。
 
 ### テストの目的
 - Evaluate model resilience and stability when exposed to new, shifted, or previously unseen data distributions.
