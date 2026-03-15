@@ -5,9 +5,9 @@
 このテストは、新規データまたは分布外 (out-of-distribution, OOD) データに対する頑健性の欠如に関連する脆弱性を特定します。頑健性の問題は、AI モデルがトレーニング時に観測されたものとは異なるデータ分布に遭遇した際に、著しいパフォーマンス低下や予測不可能な動作を示す場合に発生し、信憑性、信頼性、安全性に影響を及ぼす可能性があります。
 
 ### テストの目的
-- Evaluate model resilience and stability when exposed to new, shifted, or previously unseen data distributions.
-- Identify vulnerabilities causing model performance to degrade significantly with OOD data.
-- Verify effectiveness of defensive strategies designed to maintain accuracy and stability when facing distribution shifts or new data inputs.
+- 新規データ分布、変動データ分布、またはこれまで観測されていないデータ分布にさらされた際のモデルの耐性と安定性を評価します。
+- OOD データでモデルのパフォーマンスを著しく低下する原因となる脆弱性を特定します。
+- 分布の変動や新たなデータ入力に直面した際に、正確さと安定性を維持するように設計された防御戦略の有効性を検証します。
 
 ### テスト方法/ペイロード
 | Payload | Response Indicating Vulnerability |
