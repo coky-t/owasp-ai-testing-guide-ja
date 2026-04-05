@@ -10,11 +10,11 @@
 - 分布の変動や新たなデータ入力に直面した際に、正確さと安定性を維持するように設計された防御戦略の有効性を検証します。
 
 ### テスト方法/ペイロード
-| Payload | Response Indicating Vulnerability |
+| ペイロード | 脆弱性を示すレスポンス |
 |---|---|
-| **Data Drift Simulation**: Use a tool like `deepchecks` or `evidently` to compare the statistical properties (e.g., distribution, mean, variance) of the training data with a new batch of production data. | The tool generates a report showing significant drift in multiple features. For example, the mean of a feature has shifted by more than 3 standard deviations, or the distribution (measured by PSI - Population Stability Index) is above a critical threshold (e.g., > 0.25). |
-| **Out-of-Distribution (OOD) Inputs**: Provide the model with inputs that are semantically different from anything it was trained on (e.g., feeding an image of a car to a cat/dog classifier). | The model makes a high-confidence prediction for one of its known classes instead of indicating that the input is unfamiliar. For example, it classifies the car as a "dog" with 98% confidence. |
-| **Edge Case and Boundary Testing**: Systematically generate inputs that are at the extreme ends of the expected feature ranges or represent rare but plausible scenarios. | The model produces erratic, nonsensical, or highly uncertain predictions for these edge-case inputs, indicating it has not learned to generalize well outside the core of its training distribution. |
+| **データドリフトシミュレーション**: `deepchecks` や `evidently` などのツールを使用して、トレーニングデータの統計的特性 (分布、平均、分散など) を新しい本番データと比較します。 | ツールは複数の特徴量における顕著なドリフトを示すレポートを生成します。たとえば、ある特徴量の平均が 3 標準偏差以上シフトしたり、分布 (PSI - Population Stability Index で計測) が臨界閾値 (0.25 以上など) を超えるなど。 |
+| **分布外 (Out-of-Distribution, OOD) 入力**: モデルに、訓練にものとは意味的に異なる入力を与えます (例: 猫/犬分類器に車の画像を入力します)。 | モデルは、入力が未知であることを示すのではなく、既知のクラスのいずれかに対して高い確信度で予測を行います。たとえば、車を 98% の確信度で分類します。 |
+| **エッジケースと境界テスト**: 想定した特徴範囲の両極端にある入力、あるいは稀ではあるが起こりうるシナリオを表す入力を体系的に生成します。 | モデルは、これらのエッジケースの入力に対して、不規則、不合理、あるいは非常に不明確な予測を生成し、トレーニング分布の中核部分以外では十分に汎化することを学習していないことを示しています。 |
 
 ### 期待される出力
 - **Stable Performance on New Data**: The model's accuracy, precision, and recall should not degrade by more than a predefined threshold (e.g., 5-10%) when evaluated on new data that has drifted slightly from the training data.
