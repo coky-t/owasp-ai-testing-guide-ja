@@ -17,9 +17,9 @@
 | **エッジケースと境界テスト**: 想定した特徴範囲の両極端にある入力、あるいは稀ではあるが起こりうるシナリオを表す入力を体系的に生成します。 | モデルは、これらのエッジケースの入力に対して、不規則、不合理、あるいは非常に不明確な予測を生成し、トレーニング分布の中核部分以外では十分に汎化することを学習していないことを示しています。 |
 
 ### 期待される出力
-- **Stable Performance on New Data**: The model's accuracy, precision, and recall should not degrade by more than a predefined threshold (e.g., 5-10%) when evaluated on new data that has drifted slightly from the training data.
-- **Graceful Handling of OOD Inputs**: When faced with an OOD input, a robust model should output a low-confidence score or explicitly classify it as "unknown." It should not make a high-confidence, incorrect prediction.
-- **Low Data Drift Score**: Automated tools should report a low data drift score (e.g., PSI < 0.1) and pass all major validation checks between the training and new datasets.
+- **新規データにおける安定したパフォーマンス**: モデルの正確度、精度、再現率は、トレーニングデータからわずかにドリフトした新規データで評価した場合でも、事前定義された閾値 (例: 5 ～ 10%) を超えて低下してはいけません。
+- **OOD 入力の巧みな処理**: OOD 入力に直面した場合、堅牢なモデルは低い信頼度スコアを出力するか、明示的に「不明」として分類する必要があります。高い信頼度、誤った予測をしてはいけません。
+- **低いデータドリフトスコア**: 自動ツールは低いデータドリフトスコア (例: PSI < 0.1) を報告し、トレーニングデータセットと新規データセット間のすべての主要なバリデーションチェックに合格する必要があります。
 
 ### 対策
 - **Implement Continuous Data and Model Monitoring**: Use tools like `deepchecks` or `evidently` in your MLOps pipeline to automatically monitor for data drift, concept drift, and performance degradation. Trigger alerts when drift is detected.
