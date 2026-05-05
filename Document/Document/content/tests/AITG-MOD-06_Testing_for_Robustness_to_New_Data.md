@@ -22,11 +22,11 @@
 - **低いデータドリフトスコア**: 自動ツールは低いデータドリフトスコア (例: PSI < 0.1) を報告し、トレーニングデータセットと新規データセット間のすべての主要なバリデーションチェックに合格する必要があります。
 
 ### 対策
-- **Implement Continuous Data and Model Monitoring**: Use tools like `deepchecks` or `evidently` in your MLOps pipeline to automatically monitor for data drift, concept drift, and performance degradation. Trigger alerts when drift is detected.
-- **Use Robust Training Methods**: Employ data augmentation to create a more diverse training set that exposes the model to a wider range of variations. This helps the model generalize better to unseen data.
-- **Implement Uncertainty Quantification**: Design the model to not only make a prediction but also to provide a measure of its own uncertainty. If the uncertainty for a given prediction is high, the system can flag it for manual review instead of trusting it automatically.
-- **Periodically Retrain the Model**: Schedule regular retraining of the model on fresh data that includes recent production data. This ensures the model stays up-to-date with the latest data distributions.
-- **Domain Adaptation Techniques**: If you anticipate specific types of drift, use domain adaptation techniques during training to explicitly teach the model to be invariant to those changes.
+- **継続的なデータとモデルの監視を実装する**: MLOps パイプラインに `deepchecks` や `evidently` などのツールを使用して、データドリフト、コンセプトドリフト、パフォーマンス低下を自動的に監視します。ドリフトが検出されるとアラートをトリガーします。
+- **堅牢なトレーニング手法を使用する**: データ拡張を用いて、モデルをより幅広いバリエーションにさらす、より多様なトレーニングセットを作成します。これはモデルが未知のデータに対してより適切に汎化するのに役立ちます。
+- **不確実性定量化を実装する**: モデルを設計するには、予測を行うだけでなく、自身の不確実性の測定も提供します。特定の予測の不確実性が高い場合に、システムは自動的に信頼するのではなく手動レビューのためにフラグ付けできます。
+- **モデルを定期的に再訓練する**: 最新の本番データを含む新しいデータでモデルの定期的な再トレーニングをスケジュールします。これはモデルが最新のデータ分布で常に最新にあることを確保します。
+- **ドメイン適応技法**: 特定のタイプのドリフトを予想する場合、トレーニング時にドメイン適応技法を使用して、モデルをそれらの変化に不変になるように明示的に学習します。
 
 ### 推奨されるツール
 - **DeepChecks**: An open-source Python library for validating and testing ML models and data, with a strong focus on detecting data drift, corruption, and other issues - [DeepChecks on GitHub](https://github.com/deepchecks/deepchecks)
