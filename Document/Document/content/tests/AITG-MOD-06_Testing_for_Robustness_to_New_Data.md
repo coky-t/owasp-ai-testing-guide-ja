@@ -29,9 +29,9 @@
 - **ドメイン適応技法**: 特定のタイプのドリフトを予想する場合、トレーニング時にドメイン適応技法を使用して、モデルをそれらの変化に不変になるように明示的に学習します。
 
 ### 推奨されるツール
-- **DeepChecks**: An open-source Python library for validating and testing ML models and data, with a strong focus on detecting data drift, corruption, and other issues - [DeepChecks on GitHub](https://github.com/deepchecks/deepchecks)
-- **Evidently AI**: An open-source Python library for evaluating, testing, and monitoring ML models in production. It provides interactive reports on data drift and model performance - [Evidently AI on GitHub](https://github.com/evidentlyai/evidently)
-- **Alibi Detect**: A Python library focused on outlier, adversarial, and drift detection. It provides a range of algorithms for detecting OOD data - [Alibi Detect on GitHub](https://github.com/SeldonIO/alibi-detect)
+- **DeepChecks**: ML モデルとデータを検証およびテストするためのオープンソースの Python ライブラリ。データドリフト、データ破損、その他の問題を検出することに重点を置いています - [DeepChecks on GitHub](https://github.com/deepchecks/deepchecks)
+- **Evidently AI**: 本番環境の ML モデルを評価、テスト、監視するためのオープンソース Python ライブラリ。データドリフトとモデルのパフォーマンスに関するインタラクティブなレポートを提供します - [Evidently AI on GitHub](https://github.com/evidentlyai/evidently)
+- **Alibi Detect**: 外れ値、敵対的、ドリフトの検出に焦点を当てた Python ライブラリ。OOD データを検出するためのさまざまなアルゴリズムを提供します - [Alibi Detect on GitHub](https://github.com/SeldonIO/alibi-detect)
 
 
 ### 参考情報
