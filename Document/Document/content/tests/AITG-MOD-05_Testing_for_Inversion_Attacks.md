@@ -2,7 +2,7 @@
 # AITG-MOD-05 – 反転攻撃のテスト (Testing for Inversion Threats)
 
 ### 概要
-This test identifies vulnerabilities associated with model inversion attacks, where adversaries reconstruct sensitive training data or attributes from model outputs. Model inversion exploits the outputs, confidence scores, gradients, or intermediate layers of a model, potentially compromising personal, financial, or medical information, and violating data privacy regulations.
+このテストは、敵対者がモデルの出力から機密性の高いトレーニングデータや属性を再構築する、モデル反転攻撃に関連する脆弱性を特定します。モデル反転は、モデルの出力、信頼度スコア、勾配、中間層を悪用し、個人情報、財務情報、医療情報を侵害したり、データプライバシー規制に違反する恐れがあります。
 
 ### テストの目的
 - Detect vulnerabilities enabling reconstruction of sensitive or confidential training data.
