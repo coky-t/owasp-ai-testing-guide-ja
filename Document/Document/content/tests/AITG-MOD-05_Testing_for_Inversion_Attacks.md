@@ -5,9 +5,9 @@
 このテストは、敵対者がモデルの出力から機密性の高いトレーニングデータや属性を再構築する、モデル反転攻撃に関連する脆弱性を特定します。モデル反転は、モデルの出力、信頼度スコア、勾配、中間層を悪用し、個人情報、財務情報、医療情報を侵害したり、データプライバシー規制に違反する恐れがあります。
 
 ### テストの目的
-- Detect vulnerabilities enabling reconstruction of sensitive or confidential training data.
-- Evaluate AI models' susceptibility to inversion attacks across various data modalities (images, text, numerical, etc.).
-- Validate the efficacy of privacy-preserving measures implemented to protect sensitive data from inversion threats.
+- 機微ないし機密性の高いトレーニングデータの復元を可能にする脆弱性を検出します。
+- さまざまなデータモダリティ (画像、テキスト、数値など) にわたって、反転攻撃への AI モデルの影響の受けやすさを評価します。
+- 反転脅威から機密データを保護するために実装したプライバシー保護策の有効性を検証します。
 
 ### テスト方法/ペイロード
 
