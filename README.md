@@ -4,6 +4,7 @@ This is the unofficial Japanese translation of the [OWASP AI Testing Guide](http
 
 **!!! Work In Progress !!!**
 
+<!-- - Document Site - <https://coky-t.gitbook.io/owasp-ai-testing-guide-ja/> -->
 - Document Repository - <https://github.com/coky-t/owasp-ai-testing-guide-ja>
 
 ### Originator
@@ -93,5 +94,5 @@ This is the unofficial Japanese translation of the [OWASP AI Testing Guide](http
 
 [Koki Takeyama](https://github.com/coky-t)
 
-- Document Site - <https://coky-t.gitbook.io/owasp-docs-ja/>
+<!-- - Document Site - <https://coky-t.gitbook.io/owasp-docs-ja/> -->
 - Document Repository - <https://github.com/coky-t/owasp-docs-ja>
