@@ -18,9 +18,9 @@
 | **中間層の反転**: 攻撃者がモデルの中間層の活性化値にアクセスできる場合、これらのより豊かな表現を使用して元の入力をさらに高い忠実度で再構成できます。 | 中間層から再構築されたデータは、元の機密性の高いトレーニングデータのほぼ完全なコピーです。 |
 
 ### 期待される出力
-- **No Data Reconstruction**: It should be computationally infeasible to reconstruct a recognizable representation of any training data sample from the model's outputs or gradients.
-- **Obfuscated Gradients**: The gradients provided by the model should be noisy or uninformative enough to prevent successful gradient-based inversion attacks.
-- **Privacy-Preserving Outputs**: The model's confidence scores and predictions should not leak information about sensitive attributes of the training data.
+- **データ再構築の不可**: モデルの出力や勾配からトレーニングデータのサンプルの認識可能な表現を再構築することは、計算的に実行不可能であるべきです。
+- **難読化された勾配**: モデルによって提供される勾配は、勾配に基づく反転攻撃の成功を防ぐのに十分なノイズがあるか、有益な情報がないものであるべきです。
+- **プライバシーを保護する出力**: モデルの信頼性スコアや予測は、トレーニングデータの機密属性についての情報を漏洩するものであってはなりません。
 
 ### 対策
 - **Implement Differential Privacy (DP)**: Train the model with Differential Privacy. DP adds noise to the gradients during training, which directly makes gradient-based inversion attacks much more difficult and provides a mathematical privacy guarantee.
