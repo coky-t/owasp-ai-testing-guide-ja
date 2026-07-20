@@ -23,11 +23,11 @@
 - **プライバシーを保護する出力**: モデルの信頼性スコアや予測は、トレーニングデータの機密属性についての情報を漏洩するものであってはなりません。
 
 ### 対策
-- **Implement Differential Privacy (DP)**: Train the model with Differential Privacy. DP adds noise to the gradients during training, which directly makes gradient-based inversion attacks much more difficult and provides a mathematical privacy guarantee.
-- **Limit Output Granularity**: Do not expose raw, high-precision confidence scores or logits to end-users. Instead, return only the top-k predictions or rounded confidence scores. This reduces the information an attacker can use.
-- **Gradient Masking and Pruning**: During training, apply techniques to prune or add noise to gradients, especially for models deployed in environments where gradient access is possible (e.g., federated learning).
-- **Federated Learning**: Train the model using a federated learning approach where the raw data never leaves the user's device. Only model updates (which can be further protected with DP) are sent to a central server, minimizing the risk of direct data exposure.
-- **Regular Privacy Audits**: Regularly perform model inversion attacks against your own models as part of a security audit to proactively identify and mitigate vulnerabilities.
+- **差分プライバシー (Differential Privacy, DP) を導入する**: 差分プライバシーを用いてモデルを訓練します。DP はトレーニング時の勾配にノイズを付加します。これは勾配ベースの反転攻撃を直接的に極めて困難にし、数学的なプライバシー保証を提供します。
+- **出力の粒度を制限する**: 高精度な生の信頼性スコアやロジットをエンドユーザーにさらしてはいけません。代わりに、上位 k 件の予測結果や丸めた信頼性スコアのみを返します。これは攻撃者が使用できる情報を減らします。
+- **勾配マスキングとプルーニング**: トレーニング時に、特に勾配にアクセスが可能な環境 (例: 連合学習) にデプロイされるモデルに対して、勾配のプルーニングまたはノイズ付加といった技法を適用します。
+- **連合学習 (Federated Learning)**: 生データがユーザーのデバイスから離れることがない連合学習アプローチを使用してモデルを訓練します。モデル更新 (DP でさらに保護することも可能) のみが中央サーバーに送信され、直接データ開示のリスクを最小限に抑えます。
+- **定期的なプライバシー監査**: セキュリティ監査の一環として、自身のモデルに対して定期的にモデル反転攻撃を実施し、脆弱性を事前に特定して緩和します。
 
 ### この特定のテストに推奨されるツール
 - **Adversarial Robustness Toolbox (ART)**: Includes implementations of various model inversion attacks, allowing you to test your model's susceptibility - [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
