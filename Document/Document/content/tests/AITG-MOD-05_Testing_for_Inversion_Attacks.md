@@ -30,10 +30,10 @@
 - **定期的なプライバシー監査**: セキュリティ監査の一環として、自身のモデルに対して定期的にモデル反転攻撃を実施し、脆弱性を事前に特定して緩和します。
 
 ### この特定のテストに推奨されるツール
-- **Adversarial Robustness Toolbox (ART)**: Includes implementations of various model inversion attacks, allowing you to test your model's susceptibility - [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
-- **TensorFlow Privacy**: A library for training models with Differential Privacy, which is a primary defense against inversion attacks - [TensorFlow Privacy on GitHub](https://github.com/tensorflow/privacy)
-- **Opacus (for PyTorch)**: A library from Meta that enables training PyTorch models with differential privacy - [Opacus on GitHub](https://github.com/pytorch/opacus)
-- **PrivacyRaven**: A framework from Trail of Bits specifically designed for privacy testing of deep learning models, including model inversion - [PrivacyRaven on GitHub](https://github.com/trailofbits/PrivacyRaven)
+- **Adversarial Robustness Toolbox (ART)**: さまざまなモデル反転攻撃の実装を含み、モデルの感受性をテストできます - [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
+- **TensorFlow Privacy**: 差分プライバシーを用いてモデルを訓練するライブラリであり、反転攻撃に対する主要な防御です - [TensorFlow Privacy on GitHub](https://github.com/tensorflow/privacy)
+- **Opacus (for PyTorch)**: 差分プライバシーを用いて PyTorch モデルを訓練することを可能にする Meta のライブラリです - [Opacus on GitHub](https://github.com/pytorch/opacus)
+- **PrivacyRaven**: モデル反転を含む、ディープラーニングモデルのプライバシーテスト向けに特別に設計された Trail of Bits のフレームワークです - [PrivacyRaven on GitHub](https://github.com/trailofbits/PrivacyRaven)
 
 ### 参考情報
 - Fredrikson, Matt, Somesh Jha, and Thomas Ristenpart. "Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures." ACM CCS 2015. [Link](https://dl.acm.org/doi/10.1145/2810103.2813677)
