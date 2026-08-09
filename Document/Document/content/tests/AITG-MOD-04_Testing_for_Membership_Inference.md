@@ -2,7 +2,7 @@
 # AITG-MOD-04 – メンバーシップ推論のテスト (Testing for Membership Inference)
 
 ### 概要
-This test identifies vulnerabilities to membership inference attacks, where adversaries determine whether specific data points were used during model training. Membership inference attacks exploit model responses or confidence scores to compromise data privacy, potentially leading to exposure of sensitive information and regulatory non-compliance.
+このテストは、特定のデータポイントがモデルのトレーニング時に使用されたかどうかを敵対者が判断する、メンバーシップ推論攻撃への脆弱性を特定します。メンバーシップ推論攻撃はモデルのレスポンスや信頼度スコアを悪用してデータのプライバシーを侵害し、機密情報の露出や規制の非遵守につながる恐れがあります。
 
 ### テストの目的
 - Detect vulnerabilities that allow adversaries to infer the presence of specific training data points.
