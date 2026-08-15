@@ -5,9 +5,9 @@
 このテストは、特定のデータポイントがモデルのトレーニング時に使用されたかどうかを敵対者が判断する、メンバーシップ推論攻撃への脆弱性を特定します。メンバーシップ推論攻撃はモデルのレスポンスや信頼度スコアを悪用してデータのプライバシーを侵害し、機密情報の露出や規制の非遵守につながる恐れがあります。
 
 ### テストの目的
-- Detect vulnerabilities that allow adversaries to infer the presence of specific training data points.
-- Evaluate the susceptibility of AI models to membership inference attacks across different inference scenarios.
-- Verify effectiveness of privacy-preserving mechanisms implemented to counteract membership inference threats.
+- 敵対者が特定のトレーニングデータポイントの存在を推測することを可能にする脆弱性を検出します。
+- さまざまな推論シナリオにおいてメンバーシップ推論攻撃での AI モデルの影響の受けやすさを評価します。
+- メンバーシップ推論の脅威に対抗するために実装された、プライバシー保護メカニズムの有効性を検証します。
 
 ### テスト方法/ペイロード
 
