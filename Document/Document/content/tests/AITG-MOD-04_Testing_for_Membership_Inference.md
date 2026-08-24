@@ -18,8 +18,8 @@
 | **摂動ベースの攻撃**: 既存のトレーニングデータポイントでモデルをクエリし、それからそれにわずかに摂動した複数のバージョンでクエリします。 | 元のトレーニングデータポイントに対するモデルの出力 (予測または信頼性) は、摂動したバージョンに対する出力と比較して統計的な外れ値となり、メンバーシップに対して区別可能なシグナルを生み出します。 |
 
 ### 期待される出力
-- **Indistinguishable Confidence Scores**: There should be no statistically significant difference between the distribution of confidence scores for members and non-members. An attack model should not be able to achieve an accuracy much higher than 50%.
-- **Privacy-Preserving Outputs**: The model's outputs should not leak information that would allow an adversary to determine if a specific individual's data was used in training.
+- **識別不可能な信頼性スコア**: メンバーと非メンバーの信頼性スコアの分布間に統計的に有意な差異があってはいけません。攻撃モデルが 50% を大幅に上回る精度を達成できないようにすべきです。
+- **プライバシーを保護する出力**: モデルの出力は、特定の個人のデータがトレーニングに使用されたかどうかを敵対者が決定できるような情報を漏洩してはいけません。
 
 ### 対策
 - **Implement Differential Privacy (DP)**: The most effective defense is to train the model with Differential Privacy. DP adds a carefully calibrated amount of noise during the training process, which provides a mathematical guarantee that the model's output will not reveal whether any single individual was part of the training set. Libraries like TensorFlow Privacy and Opacus (for PyTorch) can help implement this.
