@@ -2,7 +2,7 @@
 # AITG-MOD-04 – メンバーシップ推論のテスト (Testing for Membership Inference)
 
 ### 概要
-このテストは、特定のデータポイントがモデルのトレーニング時に使用されたかどうかを敵対者が判断する、メンバーシップ推論攻撃への脆弱性を特定します。メンバーシップ推論攻撃はモデルのレスポンスや信頼度スコアを悪用してデータのプライバシーを侵害し、機密情報の露出や規制の非遵守につながる恐れがあります。
+このテストは、特定のデータポイントがモデルのトレーニング時に使用されたかどうかを敵対者が判断する、メンバーシップ推論攻撃への脆弱性を特定します。メンバーシップ推論攻撃はモデルのレスポンスや信頼性スコアを悪用してデータのプライバシーを侵害し、機密情報の露出や規制の非遵守につながる恐れがあります。
 
 ### テストの目的
 - 敵対者が特定のトレーニングデータポイントの存在を推測することを可能にする脆弱性を検出します。
@@ -22,11 +22,11 @@
 - **プライバシーを保護する出力**: モデルの出力は、特定の個人のデータがトレーニングに使用されたかどうかを敵対者が決定できるような情報を漏洩してはいけません。
 
 ### 対策
-- **Implement Differential Privacy (DP)**: The most effective defense is to train the model with Differential Privacy. DP adds a carefully calibrated amount of noise during the training process, which provides a mathematical guarantee that the model's output will not reveal whether any single individual was part of the training set. Libraries like TensorFlow Privacy and Opacus (for PyTorch) can help implement this.
-- **Use Regularization Techniques**: Techniques like dropout and L2 regularization can make the model less likely to overfit to its training data. A model that overfits is more vulnerable to membership inference because it has effectively "memorized" its training set.
-- **Reduce Model Complexity**: Simpler models are often less prone to overfitting and, by extension, less vulnerable to membership inference attacks. If possible, use a less complex model architecture.
-- **Output Perturbation**: Add a small amount of noise to the model's output probabilities (confidence scores). This can help obscure the difference between member and non-member outputs, but it must be done carefully to avoid significantly impacting the model's utility.
-- **Knowledge Distillation**: Train a smaller "student" model to mimic a larger "teacher" model. The student model often does not have the same overfitting characteristics and can be more robust to these attacks.
+- **差分プライバシー (Differential Privacy, DP) を導入する**: 最も効果的な防御は差分プライバシーでモデルを学習することです。DP はトレーニングプロセス時に注意深く調整された量のノイズを付与し、特定の個人がトレーニングセットの一部であるかどうかを、モデルの出力が明らかにしないことを数学的に保証します。TensorFlow Privacy や Opacus (PyTorch 用) などのライブラリがこの実装に役立ちます。
+- **正則化技法を使用する**: ドロップアウトや L2 正則化といった技法は、モデルをそのトレーニングデータに過剰適合しないようにできます。過剰適合したモデルは、そのトレーニングセットを実質的に「記憶」するため、メンバーシップ推論に対してより脆弱になります。
+- **モデルの複雑さを低減する**: より単純なモデルは一般的に過学習を起こしにくく、その延長として、メンバーシップ推論攻撃に対して脆弱になりにくくなります。可能であれば、より複雑ではないモデルアーキテクチャを使用してください。
+- **出力摂動 (Output Perturbation)**: モデルの出力確率 (信頼性スコア) に少量のノイズを加えます。これはメンバーと非メンバーの出力間の差異をあいまいにできる可能性がありますが、モデルの有用性に大きな影響を及ぼすことを避けるために注意深く行われる必要があります。
+- **知識蒸留 (Knowledge Distillation)**: より大きな「教師」モデルを模倣するように、より小さな「生徒」モデルをトレーニングします。生徒モデルは同様な過学習の特定を持たないことが多く、これらの攻撃に対してより堅牢にできます。
 
 ### 推奨されるツール
 - **Adversarial Robustness Toolbox (ART)**: Provides explicit mechanisms for running membership inference attacks and evaluating model privacy -  [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
