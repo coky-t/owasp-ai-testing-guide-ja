@@ -29,10 +29,10 @@
 - **知識蒸留 (Knowledge Distillation)**: より大きな「教師」モデルを模倣するように、より小さな「生徒」モデルをトレーニングします。生徒モデルは同様な過学習の特定を持たないことが多く、これらの攻撃に対してより堅牢にできます。
 
 ### 推奨されるツール
-- **Adversarial Robustness Toolbox (ART)**: Provides explicit mechanisms for running membership inference attacks and evaluating model privacy -  [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
-- **ML Privacy Meter**: A tool from Google specifically designed for evaluating privacy risks and membership inference vulnerabilities in machine learning models - [ML Privacy Meter on GitHub](https://github.com/privacytrustlab/ml_privacy_meter)
-- **TensorFlow Privacy**: A framework for training machine learning models with differential privacy guarantees, which is a primary defense against membership inference - [TensorFlow Privacy on GitHub](https://github.com/tensorflow/privacy)
-- **Opacus**: A library from Meta that enables training PyTorch models with differential privacy - [Opacus on GitHub](https://github.com/pytorch/opacus)
+- **Adversarial Robustness Toolbox (ART)**: メンバーシップ推論攻撃を実行し、モデルのプライバシーを評価するための、明示的なメカニズムを提供します -  [ART on GitHub](https://github.com/Trusted-AI/adversarial-robustness-toolbox)
+- **ML Privacy Meter**: 機械学習モデルでのプライバシーリスクやメンバーシップ推論の脆弱性を評価するために Google が特別に設計したツールです - [ML Privacy Meter on GitHub](https://github.com/privacytrustlab/ml_privacy_meter)
+- **TensorFlow Privacy**: メンバーシップ推論に対する主要な防御である、差分プライバシーを保証しつつ、機械学習モデルをトレーニングするためのフレームワークです - [TensorFlow Privacy on GitHub](https://github.com/tensorflow/privacy)
+- **Opacus**: 差分プライバシーとともに PyTorch モデルをトレーニング可能にする Meta のライブラリです - [Opacus on GitHub](https://github.com/pytorch/opacus)
 
 ### 参考情報
 - Shokri, Reza, et al. "Membership Inference Attacks Against Machine Learning Models." IEEE Symposium on Security and Privacy (SP), 2017. [Link](https://www.cs.cornell.edu/~shmat/shmat_oak17.pdf)
