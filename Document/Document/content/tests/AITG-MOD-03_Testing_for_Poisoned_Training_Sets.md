@@ -2,7 +2,7 @@
 # AITG-MOD-03 - 汚染されたトレーニングセットのテスト (Testing for Poisoned Training Sets)
 
 ### 概要
-This test identifies vulnerabilities associated with poisoned training datasets, where adversaries deliberately inject or alter training data to compromise AI model integrity during the training phase. Data poisoning can embed biases, create persistent backdoors, or degrade overall model accuracy and reliability, significantly impacting operational trust and compliance.
+このテストは、敵対者がトレーニングフェーズで AI モデルの完全性を損なうように、故意にトレーニングデータを注入または改竄する、汚染されたトレーニングデータセットに関連する脆弱性を特定します。データポイズニングは、バイアスを埋め込んだり、永続的なバックドアを作成したり、モデル全体の正確性や信頼性を低下する恐れがあり、運用上の信頼性やコンプライアンスに重大な影響を及ぼします。
 
 ### テストの目的
 - Detect the presence and impact of maliciously poisoned samples within training datasets.
