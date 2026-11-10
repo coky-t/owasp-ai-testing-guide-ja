@@ -19,9 +19,9 @@
 | **標的型ポイズニング**: 特定のサブグループ (例: 特定の犬種の画像) に属するサンプルを巧妙に摂動し、間違ったラベル付けして、そのサブグループでのモデルの性能を低下します。 | トレーニング後、モデルはその全体的な精度と比較して、標的としたサブグループで著しく低い精度を提示し、ポイズニング攻撃が成功したことを示します。 |
 
 ### 期待される出力
-- **Clean and Verified Data**: The training dataset should be free of detectable label errors or malicious patterns. Automated tools should flag less than 1% of the data as potentially mislabeled.
-- **Anomaly Detection**: The data validation pipeline should automatically detect and flag anomalous clusters of data points that could represent a poisoning attack.
-- **Robust Model Performance**: A model trained on the audited dataset should not exhibit unexpected biases or backdoors when tested.
+- **クリーンかつ検証済みのデータ**: トレーニングデータセットは検出可能なラベルエラーや悪意のあるパターンを含んではいけません。自動化ツールでは、ラベルに誤りの可能性のあるものは、そのデータの 1% 未満に抑えるべきです。
+- **異常検知**: データバリデーションパイプラインは、ポイズニング攻撃を象徴するような異常なデータポイントのクラスタを自動的に検出し、フラグ付けすべきです。
+- **堅牢なモデル性能**: 精査済みデータセットで訓練されたモデルは、テスト時に予期せぬバイアスやバックドアを示してはいけません。
 
 ### 対策
 - **Implement Data Validation and Sanitization Pipelines**: Before training, always run the dataset through an automated validation pipeline. Use tools like `cleanlab` to find and correct label errors, and use anomaly detection to flag suspicious data points for manual review.
